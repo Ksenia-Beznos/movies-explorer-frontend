@@ -1,0 +1,59 @@
+.techs {
+	background-color: #272727;
+}
+
+.techs__container {
+	background-color: #272727;
+	max-width: 1280px;
+	min-height: 625px;
+	margin: 0 70px;
+}
+
+.techs__header {
+	background-color: #272727;
+	margin: 0 auto;
+	padding: 100px 0 23px 0;
+	width: 1140px;
+	border-bottom: 1px #dadada solid;
+	font-size: 22px;
+	font-weight: 400;
+	line-height: 1.2;
+}
+
+.techs__title {
+	margin: 94px 70px 30px;
+	font-size: 50px;
+	font-weight: 400;
+	line-height: 1.2;
+	text-align: center;
+}
+
+.techs__subtitle {
+	margin: 0 auto 100px;
+	width: 470px;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.4;
+	text-align: center;
+	letter-spacing: -0.4px;
+}
+
+.techs__list {
+	padding: 0;
+	display: flex;
+  gap: 10px;
+	justify-content: center;
+	list-style: none;
+	margin: 0 70px;
+}
+
+.techs__skill {
+	display: flex;
+	margin: 0;
+	background-color: #303030;
+	width: 90px;
+	height: 60px;
+	border-radius: 10px;
+	align-items: center;
+	justify-content: center;
+}

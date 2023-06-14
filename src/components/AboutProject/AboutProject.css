@@ -1,0 +1,80 @@
+.project {
+	background-color: #202020;
+}
+
+.project__container {
+	background-color: #202020;
+	min-height: 608px;
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+.project__header {
+	background-color: #202020;
+	margin: 0 auto;
+	padding: 110px 0 23px 0;
+	width: 1140px;
+	border-bottom: 1px #dadada solid;
+	font-size: 22px;
+	font-weight: 400;
+	line-height: 1.2;
+}
+
+.project__descriptions {
+	margin: 70px 70px 100px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 40px 26px;
+	justify-content: space-between;
+}
+
+.project__description {
+	margin: 0;
+	width: 550px;
+	font-weight: 400;
+}
+
+.project__title {
+	font-size: 20px;
+}
+
+.project__subtitle {
+	font-size: 14px;
+	line-height: 1.4;
+}
+
+.timing {
+	margin: 0 auto 110px 70px;
+	display: grid;
+  row-gap: 14px;
+	grid-template-columns: 228px 912px;
+	text-align: center;
+}
+
+.timing__week {
+	display: grid;
+  align-items: center;
+	margin: 0;
+	min-height: 36px;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.timing__week_color_green {
+	background-color: #3ddc84;
+	color: #000;
+}
+
+.timing__week_color_grey {
+	background-color: #303030;
+}
+
+.timing__task {
+  display: grid;
+  align-items: center;
+	margin: 0;
+	min-height: 17px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #8b8b8b;
+}
