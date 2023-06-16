@@ -1,12 +1,12 @@
 .techs {
 	background-color: #272727;
+		min-height: 625px;
 }
 
 .techs__container {
 	background-color: #272727;
 	max-width: 1280px;
-	min-height: 625px;
-	margin: 0 70px;
+	margin: 0 auto;
 }
 
 .techs__header {

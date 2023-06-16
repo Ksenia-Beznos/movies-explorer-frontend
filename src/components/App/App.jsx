@@ -8,7 +8,7 @@ import SavedMovies from '../SavedMovies/SavedMovies';
 
 function App() {
 	return (
-		<div className="App">
+		<div className="app">
 			<Routes>
 				<Route path="/" element={<Main />} />
 				<Route path="/movies" element={<Movies />} />

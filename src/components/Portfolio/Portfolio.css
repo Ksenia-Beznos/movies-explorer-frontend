@@ -1,0 +1,40 @@
+.portfolio {
+	background-color: #202020;
+}
+
+.portfolio__container {
+	background-color: #202020;
+	min-height: 526px;
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+.portfolio__header {
+	margin: 101px auto 50px 70px;
+  font-size: 18px;
+	font-weight: 400;
+	line-height: 1.2;
+  color: #8b8b8b;
+}
+
+.portfolio__sites {
+	list-style: none;
+	padding: 0;
+	margin: 101px auto 125px 70px;
+	flex-direction: column;
+	column-gap: 200px;
+}
+
+.portfolio__site {
+  display: flex;
+  justify-content: space-between;
+	text-decoration: none;
+	color: white;
+	border-bottom: 1px #424242 solid;
+  width: 1140px;
+	font-size: 30px;
+	font-weight: 400;
+	line-height: 1.6;
+	letter-spacing: -0.4px;
+  padding: 20px 0 19px;
+}
