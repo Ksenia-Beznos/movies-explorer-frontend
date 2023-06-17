@@ -21,6 +21,7 @@
   line-height: 1.38;
 	padding: 2px;
 	padding-left: 50px;
+  cursor: pointer;
 }
 
 .checkbox__inner::before {
