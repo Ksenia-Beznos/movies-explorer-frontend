@@ -17,15 +17,17 @@
 	border-bottom: 1px #dadada solid;
 	font-size: 22px;
 	font-weight: 400;
-	line-height: 1.2;
+	line-height: 1.21;
+	letter-spacing: -0.4px;
 }
 
 .project__descriptions {
 	margin: 70px 70px 100px;
 	display: flex;
 	flex-wrap: wrap;
-	gap: 40px 26px;
+	column-gap: 40px;
 	justify-content: space-between;
+	
 }
 
 .project__description {
@@ -36,6 +38,8 @@
 
 .project__title {
 	font-size: 20px;
+	margin-bottom: 26px;
+	letter-spacing: -0.4px;
 }
 
 .project__subtitle {
@@ -44,7 +48,7 @@
 }
 
 .timing {
-	margin: 0 auto 110px 70px;
+	margin: 110px auto 0 70px;
 	display: grid;
   row-gap: 14px;
 	grid-template-columns: 228px 912px;

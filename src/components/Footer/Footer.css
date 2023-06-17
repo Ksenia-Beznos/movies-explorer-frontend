@@ -10,5 +10,47 @@
 }
 
 .footer__text {
+	margin: 0 auto;
+	width: 1140px;
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 1.2;
+	color: #8b8b8b;
+	border-bottom: 1px #424242 solid;
+	text-align: center;
+	padding: 79px 0 20px;
+}
+
+.footer__end {
+	display: flex;
+	justify-content: space-between;
+	max-width: 1140px;
+	margin: 20px auto 20px;
+}
+
+.footer__github {
+	text-decoration: none;
+	color: white;
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 1.2;
+}
+
+.footer__date {
 	margin: 0;
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 1.2;
+}
+
+.footer__services {
+	display: flex;
+	gap: 20px;
+}
+
+.footer__practicum {
+	margin: 0;
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 1.21;
 }

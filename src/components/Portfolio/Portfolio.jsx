@@ -8,20 +8,35 @@ function Portfolio() {
 			<div className="portfolio__container">
 				<h3 className="portfolio__header">Портфолио</h3>
 				<ul className="portfolio__sites">
-					<li>
-						<a className="portfolio__site" href="#" rel="noreferrer" target="_blank">
+					<li className="portfolio__list-item">
+						<a
+							className="portfolio__site"
+							href="https://ksenia-beznos.github.io/how-to-learn/"
+							rel="noreferrer"
+							target="_blank"
+						>
 							Статичный сайт
 							<img className="portfolio__arrow" src={arrow} alt="Иконка стрелки" />
 						</a>
 					</li>
-					<li>
-						<a className="portfolio__site" href="#" rel="noreferrer" target="_blank">
+					<li className="portfolio__list-item">
+						<a
+							className="portfolio__site"
+							href="https://ksenia-beznos.github.io/russian-travel/"
+							rel="noreferrer"
+							target="_blank"
+						>
 							Адаптивный сайт
 							<img className="portfolio__arrow" src={arrow} alt="Иконка стрелки" />
 						</a>
 					</li>
-					<li>
-						<a className="portfolio__site" href="#" rel="noreferrer" target="_blank">
+					<li className="portfolio__list-item">
+						<a
+							className="portfolio__site"
+							href="https://mesto-yandex.nomoredomains.rocks"
+							rel="noreferrer"
+							target="_blank"
+						>
 							Одностраничное приложение
 							<img className="portfolio__arrow" src={arrow} alt="Иконка стрелки" />
 						</a>

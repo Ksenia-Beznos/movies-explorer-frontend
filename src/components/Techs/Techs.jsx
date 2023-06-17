@@ -29,7 +29,7 @@ function Techs() {
 						<p className="techs__skill">Express.js</p>
 					</li>
 					<li>
-						<p className="techs__skill">MongoDB</p>
+						<p className="techs__skill">mongoDB</p>
 					</li>
 				</ul>
 			</div>

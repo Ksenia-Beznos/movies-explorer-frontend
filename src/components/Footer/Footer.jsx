@@ -7,16 +7,18 @@ function Footer() {
 			<div className="footer__container">
 				<p className="footer__text">Учебный проект Яндекс.Практикум х BeatFilm.</p>
 				<div className="footer__end">
-					<p className="footer__date">{new Date().getFullYear()}</p>
-					<p className="footer__practicum">Яндекс.Практикум</p>
-					<a
-						className="github-link"
-						href="https://github.com/Ksenia-Beznos"
-						rel="noreferrer"
-						target="_blank"
-					>
-						Github
-					</a>
+					<p className="footer__date">&copy; {new Date().getFullYear()}</p>
+					<div className="footer__services">
+						<p className="footer__practicum">Яндекс.Практикум</p>
+						<a
+							className="footer__github"
+							href="https://github.com/Ksenia-Beznos"
+							rel="noreferrer"
+							target="_blank"
+						>
+							Github
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>

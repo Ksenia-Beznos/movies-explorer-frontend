@@ -18,7 +18,7 @@ function AboutMe() {
 					заниматься фриланс-заказами и ушёл с постоянной работы.
 				</p>
 				<a
-					className="github-link"
+					className="student__github"
 					href="https://github.com/Ksenia-Beznos"
 					rel="noreferrer"
 					target="_blank"
