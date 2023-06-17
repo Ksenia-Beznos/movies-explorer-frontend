@@ -1,6 +1,6 @@
 .techs {
 	background-color: #272727;
-		min-height: 625px;
+	min-height: 625px;
 }
 
 .techs__container {
@@ -43,7 +43,7 @@
 .techs__list {
 	padding: 0;
 	display: flex;
-  gap: 10px;
+	gap: 10px;
 	justify-content: center;
 	list-style: none;
 	margin: 0 70px;

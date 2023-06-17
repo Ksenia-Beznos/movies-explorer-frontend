@@ -1,0 +1,9 @@
+.movies-page {
+	background-color: #202020;
+}
+
+.movies-page__container {
+	background-color: #202020;
+	max-width: 1280px;
+	margin: 0 auto;
+}

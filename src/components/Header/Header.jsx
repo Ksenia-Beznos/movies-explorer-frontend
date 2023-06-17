@@ -14,7 +14,7 @@ function Header() {
 					Фильмы
 				</NavLink>
 				<NavLink to="/saved-movies" className="header__movies-saved">
-					Сохраненные фильмы
+					Сохранённые фильмы
 				</NavLink>
 			</div>
 			<div className="profile">

@@ -1,16 +1,10 @@
 .project {
-	background-color: #202020;
-}
-
-.project__container {
-	background-color: #202020;
 	min-height: 608px;
 	max-width: 1280px;
 	margin: 0 auto;
 }
 
 .project__header {
-	background-color: #202020;
 	margin: 0 auto;
 	padding: 110px 0 23px 0;
 	width: 1140px;
@@ -27,7 +21,6 @@
 	flex-wrap: wrap;
 	column-gap: 40px;
 	justify-content: space-between;
-	
 }
 
 .project__description {
@@ -50,14 +43,14 @@
 .timing {
 	margin: 110px auto 0 70px;
 	display: grid;
-  row-gap: 14px;
+	row-gap: 14px;
 	grid-template-columns: 228px 912px;
 	text-align: center;
 }
 
 .timing__week {
 	display: grid;
-  align-items: center;
+	align-items: center;
 	margin: 0;
 	min-height: 36px;
 	font-size: 14px;
@@ -74,11 +67,11 @@
 }
 
 .timing__task {
-  display: grid;
-  align-items: center;
+	display: grid;
+	align-items: center;
 	margin: 0;
 	min-height: 17px;
-  font-size: 14px;
-  font-weight: 500;
-  color: #8b8b8b;
+	font-size: 14px;
+	font-weight: 500;
+	color: #8b8b8b;
 }

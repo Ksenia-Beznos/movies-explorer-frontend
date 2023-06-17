@@ -1,9 +1,4 @@
 .student {
-	background-color: #202020;
-}
-
-.student__container {
-	background-color: #202020;
 	min-height: 654px;
 	max-width: 1280px;
 	margin: 0 auto;

@@ -1,9 +1,4 @@
 .footer {
-	background-color: #202020;
-}
-
-.footer__container {
-	background-color: #202020;
 	max-width: 1280px;
 	margin: 0 auto;
 	min-height: 172px;

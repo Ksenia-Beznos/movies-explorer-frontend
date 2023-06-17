@@ -5,8 +5,8 @@ import Portfolio from '../Portfolio/Portfolio';
 
 function AboutMe() {
 	return (
-		<div className="student">
-			<div className="student__container">
+		<>
+			<div className="student">
 				<h2 className="student__header">Студент</h2>
 				<h3 className="student__name">Ксения</h3>
 				<p className="student__course">Фронтенд-разработчик, 30 лет</p>
@@ -27,7 +27,7 @@ function AboutMe() {
 				</a>
 				<Portfolio />
 			</div>
-		</div>
+		</>
 	);
 }
 

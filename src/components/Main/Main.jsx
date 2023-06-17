@@ -14,7 +14,7 @@ function Main() {
 			<AboutProject />
 			<Techs />
 			<AboutMe />
-			<Footer />
+			<Footer/>
 		</div>
 	);
 }
