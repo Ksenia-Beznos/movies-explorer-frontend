@@ -2,6 +2,7 @@
 	max-width: 1280px;
 	margin: 0 auto;
 	padding: 74px 0 70px;
+	display: none;
 }
 
 .profile-page__title {
