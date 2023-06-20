@@ -3,7 +3,7 @@ import logo from '../../images/logo.svg';
 import { Link } from 'react-router-dom';
 // import Input from '../Input/Input';
 
-function Form({ title, buttonText, text, linkText, children }) {
+function Form({ title, buttonText, text, linkText, path, children }) {
 	return (
 		<div className="form">
 			<div className="form__head">
@@ -20,7 +20,7 @@ function Form({ title, buttonText, text, linkText, children }) {
 			</form>
 			<div className="form__footer-block">
 				<p className="form__footer-text">{text}</p>
-				<Link to="/movies" className="form__footer-link">
+				<Link to='/edit' className="form__footer-link">
 					{linkText}
 				</Link>
 			</div>

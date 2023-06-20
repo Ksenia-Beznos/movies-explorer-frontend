@@ -25,7 +25,7 @@
 
 .form__submit-button {
 	width: 100%;
-  margin-top: 69px;
+	margin-top: 69px;
 	padding: 0;
 	border: none;
 	background-color: #4285f4;
@@ -37,24 +37,36 @@
 	line-height: 1.21;
 }
 
-.form__footer-block{
-  display: flex;
-  justify-content: center;
-  gap: 6px;
+.form__submit-button:hover {
+	cursor: pointer;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+	font-size: 14px;
+	background-color: #3a78dd;
 }
 
-.form__footer-text{
-  margin: 0;
-  font-size: 14px;
+.form__submit-button:active {
+	background-color: #3a78dd;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.form__footer-block {
+	display: flex;
+	justify-content: center;
+	gap: 6px;
+}
+
+.form__footer-text {
+	margin: 0;
+	font-size: 14px;
 	font-weight: 400;
 	line-height: 1.21;
-  color: #8b8b8b;
+	color: #8b8b8b;
 }
 
-.form__footer-link{
-  text-decoration: none;
-  color: #4285f4;
-  font-size: 14px;
+.form__footer-link {
+	text-decoration: none;
+	color: #4285f4;
+	font-size: 14px;
 	font-weight: 400;
 	line-height: 1.21;
 }
