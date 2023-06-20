@@ -1,11 +1,20 @@
 .header {
 	max-width: 1280px;
+	margin: 0 auto;
+}
+
+.header__container {
 	display: flex;
 	margin: 0 70px;
 	align-items: center;
 	justify-content: space-between;
 	min-height: 74px;
 	background-color: transparent;
+}
+
+.header__logo {
+	width: 38px;
+	height: 38px;
 }
 
 .header__movies {
@@ -23,9 +32,9 @@
 	font-weight: 400;
 }
 
-.header__movies-all:focus,
-.header__movies-saved:focus {
-	font-weight: 500;
+.header__movies-all:hover,
+.header__movies-saved:hover {
+	color: #3ddc84;
 }
 
 .profile {
@@ -39,6 +48,10 @@
 	color: #fff;
 	font-size: 14px;
 	font-weight: 500;
+}
+
+.profile__link:hover {
+	color: #3ddc84;
 }
 
 .profile__icon {

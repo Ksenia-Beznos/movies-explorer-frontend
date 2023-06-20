@@ -9,6 +9,7 @@
 .search-form__input {
 	width: 1077px;
 	height: 72px;
+	padding: 0;
 	padding-left: 63px;
 	outline: none;
 	margin: 70px auto;
@@ -32,8 +33,12 @@
 	position: absolute;
 	top: 89px;
 	right: 257px;
-	cursor: pointer;
 	padding: 0;
+}
+
+.search-form__button:hover {
+	transform: translateX(2px);
+	cursor: pointer;
 }
 
 .search-form__line {

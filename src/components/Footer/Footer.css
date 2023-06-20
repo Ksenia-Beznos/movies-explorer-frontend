@@ -31,6 +31,10 @@
 	line-height: 1.2;
 }
 
+.footer__github:hover{
+	color: #3DDC84;
+}
+
 .footer__date {
 	margin: 0;
 	font-size: 13px;

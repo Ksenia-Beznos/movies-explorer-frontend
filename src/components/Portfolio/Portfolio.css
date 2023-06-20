@@ -38,6 +38,10 @@
 	width: 1140px;
 }
 
+.portfolio__site:hover{
+	color: #3DDC84;
+}
+
 .portfolio__list-item:last-of-type {
 	border: none;
 }

@@ -1,4 +1,4 @@
-.movies__list {
+.movies-saved__list {
 	display: grid;
 	grid-template-columns: repeat(3, 364px);
 	grid-template-rows: repeat(4, 281px);
@@ -8,3 +8,4 @@
 	max-height: 1315px;
 	margin: 77px 70px 10px;
 }
+

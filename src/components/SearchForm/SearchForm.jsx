@@ -15,7 +15,7 @@ function SearchForm() {
 					name="movieInput"
 					placeholder="Фильм"
 				/>
-				<button className="search-form__button" type="button">
+				<button className="search-form__button" type="submit">
 					<img src={find} alt="Кнопка в виде синей стрелки" />
 				</button>
 				<img className="search-form__line" src={line} alt="вертикальная линия" />

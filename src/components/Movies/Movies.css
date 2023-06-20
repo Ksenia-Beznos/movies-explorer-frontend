@@ -1,9 +1,25 @@
-.movies-page {
-	background-color: #202020;
+.movies {
+	width: 1280px;
+	margin: 0 auto;
 }
 
-.movies-page__container {
-	background-color: #202020;
-	max-width: 1280px;
-	margin: 0 auto;
+.movies__button {
+	padding: 0;
+	margin: 50px 480px 80px;
+	outline: none;
+	background-color: transparent;
+	border: #424242 solid 1px;
+	border-radius: 6px;
+	width: 320px;
+	height: 36px;
+	color: white;
+	font-size: 12px;
+	font-weight: 500px;
+	line-height: 1.21;
+	cursor: pointer;
+}
+
+.movies__button:hover {
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+	font-size: 14px;
 }

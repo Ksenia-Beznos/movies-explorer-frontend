@@ -33,7 +33,7 @@ function Portfolio() {
 					<li className="portfolio__list-item">
 						<a
 							className="portfolio__site"
-							href="https://mesto-yandex.nomoredomains.rocks"
+							href="https://github.com/Ksenia-Beznos/react-mesto-api-full-gha"
 							rel="noreferrer"
 							target="_blank"
 						>
