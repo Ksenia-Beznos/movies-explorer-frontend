@@ -18,7 +18,6 @@
 	margin: 0 70px;
 	align-items: center;
 	justify-content: space-between;
-
 	background-color: transparent;
 }
 
@@ -66,4 +65,15 @@
 
 .header__link-button:active {
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (max-width: 768px) {
+	.header__container {
+		max-width: 768px;
+		padding: 16px 0;
+	}
+
+	.header__container_style_bkg{
+		margin: 0 30px
+	}
 }

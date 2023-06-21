@@ -1,5 +1,4 @@
 .student {
-	min-height: 654px;
 	max-width: 1280px;
 	margin: 0 auto;
 	position: relative;
@@ -34,7 +33,6 @@
 	line-height: 1.1;
 }
 
-
 .student__description {
 	margin: 0 auto 99px 70px;
 	max-width: 599px;
@@ -44,7 +42,7 @@
 }
 
 .student__github {
-	margin: 0 auto 100px 70px;
+	margin: 0 auto 0 70px;
 	text-decoration: none;
 	color: white;
 	line-height: 1.21;
@@ -52,12 +50,57 @@
 	font-weight: 500;
 }
 
-.student__github:hover{
-	color: #3DDC84;
+.student__github:hover {
+	color: #3ddc84;
 }
 
 .student__photo {
 	position: absolute;
 	top: 227px;
 	right: 70px;
+}
+
+@media screen and (max-width: 768px) {
+	.student {
+		max-width: 768px;
+	}
+
+	.student__header {
+		padding: 91px 0 23px;
+		max-width: 668px;
+		letter-spacing: -0.9px;
+	}
+
+	.student__name {
+		margin: 66px auto 16px 50px;
+		max-width: 348px;
+		font-size: 40px;
+		line-height: 1;
+	}
+
+	.student__course {
+		margin: 0 auto 20px 50px;
+		max-width: 348px;
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 1.4;
+	}
+
+	.student__description {
+		margin: 0 auto 87px 50px;
+		max-width: 364px;
+		font-size: 12px;
+		line-height: 1.5;
+	}
+
+	.student__github {
+		margin: 0 auto 0 50px;
+	}
+
+	.student__photo {
+		top: 207px;
+		right: 50px;
+		width: 255px;
+		height: 307px;
+	}
 }

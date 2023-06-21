@@ -12,7 +12,7 @@
 
 .promo__header {
 	margin: 0 auto 36px 70px;
-	padding-top: 74px ;
+	padding-top: 74px;
 	width: 640px;
 	font-weight: 400;
 	font-size: 50px;
@@ -55,4 +55,35 @@
 
 .promo__button:active {
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (max-width: 768px) {
+	.promo__container {
+		max-width: 768px;
+		padding: 18px 0;
+	}
+
+	.promo__image {
+		top: 140px;
+		left: 229px;
+	}
+
+	.promo__header {
+		text-align: center;
+		padding-top: 475px;
+		margin: 0 44px 22px;
+		width: 680px;
+		font-size: 40px;
+		line-height: 1.25;
+	}
+
+	.promo__description {
+		text-align: center;
+		margin: 0 auto 92px;
+		width: 260px;
+	}
+
+	.promo__button {
+		margin: 0 320px 58px;
+	}
 }

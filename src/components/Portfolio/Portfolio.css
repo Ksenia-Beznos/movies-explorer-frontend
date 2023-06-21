@@ -1,7 +1,6 @@
 .portfolio {
-	min-height: 425px;
 	max-width: 1280px;
-	margin: 0 auto;
+	margin: 0 auto 106px;
 }
 
 .portfolio__header {
@@ -29,7 +28,7 @@
 	font-size: 30px;
 	font-weight: 400;
 	line-height: 1.66;
-	letter-spacing: -1px;
+	letter-spacing: -1.1px;
 	padding: 20px 0 19px;
 }
 
@@ -48,4 +47,31 @@
 
 .portfolio__list-item:last-of-type {
 	border: none;
+}
+
+@media screen and (max-width: 768px) {
+	.portfolio {
+		max-width: 768px;
+	}
+
+	.portfolio__header {
+		margin: 90px auto 30px 50px;
+		line-height: 1.1;
+	}
+
+	.portfolio__sites {
+		margin: 0 auto 90px 50px;
+		column-gap: 200px;
+	}
+	.portfolio__site {
+		width: 668px;
+		font-size: 28px;
+		line-height: 1.8;
+		letter-spacing: -1.1px;
+
+	}
+
+	.portfolio__list-item {
+		width: 668px;
+	}
 }
