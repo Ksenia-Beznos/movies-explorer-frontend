@@ -1,8 +1,9 @@
 .checkbox {
 	display: inline-block;
-  position: absolute;
-  top: 96px;
-  right: 28px;
+	position: absolute;
+	top: 96px;
+	right: 28px;
+	cursor: pointer;
 }
 
 .checkbox__inp {
@@ -17,11 +18,10 @@
 	display: inline-block;
 	position: relative;
 	font-size: 13px;
-  font-weight: 400;
-  line-height: 1.38;
+	font-weight: 400;
+	line-height: 1.38;
 	padding: 2px;
 	padding-left: 50px;
-  cursor: pointer;
 }
 
 .checkbox__inner::before {
@@ -34,27 +34,27 @@
 	height: 20px;
 	background-color: #3ddc84;
 	border-radius: 20px;
-  transition: background-color .3s;
+	transition: background-color 0.3s;
 }
 
 .checkbox__inner::after {
 	content: '';
 	display: block;
 	position: absolute;
-  top: 2px;
-  left: 18px;
-  width: 16px;
-  height: 16px;
-  border-radius: 8px;
-  background-color: white;
-  transition: background-color .3s, left .3s;
+	top: 2px;
+	left: 18px;
+	width: 16px;
+	height: 16px;
+	border-radius: 8px;
+	background-color: white;
+	transition: background-color 0.3s, left 0.3s;
 }
 
-.checkbox__inp:checked + .checkbox__inner::before{
-  background-color: white;
+.checkbox__inp:checked + .checkbox__inner::before {
+	background-color: white;
 }
 
-.checkbox__inp:checked + .checkbox__inner::after{
-  background-color: #3ddc84;
-  left: 2px;
+.checkbox__inp:checked + .checkbox__inner::after {
+	background-color: #3ddc84;
+	left: 2px;
 }

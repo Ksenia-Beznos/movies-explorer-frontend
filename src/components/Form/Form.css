@@ -1,6 +1,5 @@
 .form {
 	max-width: 396px;
-	min-height: 700px;
 	margin: 0 auto;
 }
 
@@ -20,12 +19,11 @@
 }
 
 .form__container {
-	margin-bottom: 16px;
+	min-height: 380px;
 }
 
 .form__submit-button {
 	width: 100%;
-	margin-top: 69px;
 	padding: 0;
 	border: none;
 	background-color: #4285f4;
@@ -35,6 +33,14 @@
 	font-size: 14px;
 	font-weight: 500;
 	line-height: 1.21;
+}
+
+.form__submit-button_style_min-size {
+	margin-top: 69px;
+}
+
+.form__submit-button_style_max-size {
+	margin-top: 158px;
 }
 
 .form__submit-button:hover {
@@ -53,6 +59,7 @@
 	display: flex;
 	justify-content: center;
 	gap: 6px;
+	margin-top: 16px;
 }
 
 .form__footer-text {
@@ -69,4 +76,8 @@
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 1.21;
+}
+
+.form__footer-link:hover {
+	opacity: 0.7;
 }

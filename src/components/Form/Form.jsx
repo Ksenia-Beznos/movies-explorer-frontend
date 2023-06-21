@@ -1,9 +1,8 @@
 import './Form.css';
 import logo from '../../images/logo.svg';
 import { Link } from 'react-router-dom';
-// import Input from '../Input/Input';
 
-function Form({ title, buttonText, text, linkText, path, children }) {
+function Form({ title, text, children, buttonText, linkText, path, size }) {
 	return (
 		<div className="form">
 			<div className="form__head">
@@ -14,13 +13,13 @@ function Form({ title, buttonText, text, linkText, path, children }) {
 			</div>
 			<form className="form__container">
 				{children}
-				<button className="form__submit-button" type="submit" aria-label={buttonText}>
+				<button className={`form__submit-button ${size}`} type="submit" aria-label={buttonText}>
 					{buttonText}
 				</button>
 			</form>
 			<div className="form__footer-block">
 				<p className="form__footer-text">{text}</p>
-				<Link to='/edit' className="form__footer-link">
+				<Link to={path} className="form__footer-link">
 					{linkText}
 				</Link>
 			</div>

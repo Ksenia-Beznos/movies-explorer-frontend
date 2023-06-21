@@ -1,0 +1,45 @@
+.header__movies {
+	display: flex;
+	gap: 16px;
+	margin: 0 364px 0 426px;
+}
+
+.header__movies-all,
+.header__movies-saved {
+	text-decoration: none;
+	color: #fff;
+	font-size: 13px;
+	line-height: 1.4;
+	font-weight: 400;
+}
+
+.header__movies-all:hover,
+.header__movies-saved:hover {
+	opacity: 0.7;
+}
+
+.profile {
+	display: flex;
+	gap: 17px;
+	align-items: center;
+}
+
+.profile__link {
+	text-decoration: none;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.profile__link:hover {
+	opacity: 0.7;
+}
+
+
+
+.profile__icon {
+	width: 26px;
+	height: 30px;
+	background: center url(../../images/icon-account.svg) no-repeat #313131;
+	border-radius: 4px;
+}

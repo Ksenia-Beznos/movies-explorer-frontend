@@ -11,6 +11,7 @@ function Promo() {
 					Листайте ниже, чтобы узнать больше про этот проект и его создателя.
 				</p>
 				<img className="promo__image" src={webworld} alt="Иллюстрация планеты" />
+
 				<button className="promo__button" type="button" aria-label="Узнать больше">
 					Узнать больше
 				</button>

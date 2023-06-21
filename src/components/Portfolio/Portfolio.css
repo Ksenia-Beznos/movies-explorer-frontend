@@ -5,7 +5,7 @@
 }
 
 .portfolio__header {
-	margin: 100px auto 30px 70px;
+	margin: 99px auto 30px 70px;
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 1.2;
@@ -33,13 +33,17 @@
 	padding: 20px 0 19px;
 }
 
+.portfolio__arrow {
+	padding-right: 6px;
+}
+
 .portfolio__list-item {
 	border-bottom: 1px #424242 solid;
 	width: 1140px;
 }
 
-.portfolio__site:hover{
-	color: #3DDC84;
+.portfolio__site:hover {
+	color: #3ddc84;
 }
 
 .portfolio__list-item:last-of-type {

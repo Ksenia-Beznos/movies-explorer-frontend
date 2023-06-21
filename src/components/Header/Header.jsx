@@ -1,28 +1,38 @@
 import React from 'react';
+import { Route, Routes, NavLink } from 'react-router-dom';
 import './Header.css';
 import logo from '../../images/logo.svg';
-import { Link, NavLink } from 'react-router-dom';
+import Navigation from '../Navigation/Navigation';
 
-function Header() {
+function Header({ color }) {
 	return (
-		<div className="header">
+		<div className={`header ${color}`}>
 			<div className="header__container">
-				<Link to="/">
-					<img className="header__logo" src={logo} alt="Логотип" />
-				</Link>
-				<div className="header__movies">
-					<NavLink to="/movies" className="header__movies-all">
-						Фильмы
+				<div className="header__container_style_bkg">
+					<NavLink to="/">
+						<img className="header__logo" src={logo} alt="Логотип" />
 					</NavLink>
-					<NavLink to="/saved-movies" className="header__movies-saved">
-						Сохранённые фильмы
-					</NavLink>
-				</div>
-				<div className="profile">
-					<Link to="/profile" className="profile__link">
-						Аккаунт
-					</Link>
-					<div className="profile__icon" />
+
+					<Routes>
+						<Route
+							path="/"
+							element={[
+								<div className="header__links">
+									<NavLink to="/signup" className="header__link-register">
+										Регистрация
+									</NavLink>
+									<NavLink to="/signin">
+										<button className="header__link-button" type="button" aria-label="Войти">
+											Войти
+										</button>
+									</NavLink>
+								</div>,
+							]}
+						/>
+						<Route path="/movies" element={<Navigation />} />
+						<Route path="/saved-movies" element={<Navigation />} />
+						<Route path="/profile" element={<Navigation />} />
+					</Routes>
 				</div>
 			</div>
 		</div>

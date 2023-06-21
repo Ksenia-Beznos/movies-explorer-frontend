@@ -1,14 +1,24 @@
 .header {
-	max-width: 1280px;
 	margin: 0 auto;
 }
 
+.header_style_color {
+	width: 100%;
+	background-color: #073042;
+}
+
 .header__container {
+	margin: 0 auto;
+	padding: 17px 0;
+	max-width: 1280px;
+}
+
+.header__container_style_bkg {
 	display: flex;
 	margin: 0 70px;
 	align-items: center;
 	justify-content: space-between;
-	min-height: 74px;
+
 	background-color: transparent;
 }
 
@@ -17,46 +27,43 @@
 	height: 38px;
 }
 
-.header__movies {
+.header__links {
 	display: flex;
-	gap: 16px;
-	margin: 0 364px 0 426px;
-}
-
-.header__movies-all,
-.header__movies-saved {
-	text-decoration: none;
-	color: #fff;
-	font-size: 13px;
-	line-height: 1.4;
-	font-weight: 400;
-}
-
-.header__movies-all:hover,
-.header__movies-saved:hover {
-	color: #3ddc84;
-}
-
-.profile {
-	display: flex;
-	gap: 17px;
 	align-items: center;
+	gap: 30px;
 }
 
-.profile__link {
+.header__link-register {
 	text-decoration: none;
-	color: #fff;
-	font-size: 14px;
+	color: white;
+	font-size: 12px;
 	font-weight: 500;
+	line-height: 1.33;
 }
 
-.profile__link:hover {
-	color: #3ddc84;
+.header__link-register:hover {
+	opacity: 0.7;
 }
 
-.profile__icon {
-	width: 26px;
-	height: 30px;
-	background: center url(../../images/icon-account.svg) no-repeat #313131;
-	border-radius: 4px;
+.header__link-button {
+	outline: none;
+	border: none;
+	padding: 0;
+	width: 76px;
+	height: 32px;
+	border-radius: 3px;
+	background-color: #3ddc84;
+	color: #000;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 1.33;
+	cursor: pointer;
+}
+
+.header__link-button:hover {
+	opacity: 0.9;
+}
+
+.header__link-button:active {
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }

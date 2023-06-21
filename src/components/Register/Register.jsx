@@ -4,16 +4,20 @@ import Form from '../Form/Form';
 
 function Register() {
 	return (
-		<Form
-			title="Добро пожаловать!"
-			buttonText="Зарегистрироваться"
-			linkText="Войти"
-			text="Уже зарегистрированы?"
-		>
-			<Input type="text" name="name" label="Имя" />
-			<Input type="email" name="email" label="E-mail" />
-			<Input type="password" name="password" label="Пароль" />
-		</Form>
+		<>
+			<Form
+				title="Добро пожаловать!"
+				buttonText="Зарегистрироваться"
+				text="Уже зарегистрированы?"
+				linkText="Войти"
+				path="/signin"
+				size="form__submit-button_style_min-size"
+			>
+				<Input type="text" name="name" label="Имя" />
+				<Input type="email" name="email" label="E-mail" />
+				<Input type="password" name="password" label="Пароль" />
+			</Form>
+		</>
 	);
 }
 
