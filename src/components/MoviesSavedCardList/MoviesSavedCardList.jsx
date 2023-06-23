@@ -12,9 +12,9 @@ function MoviesSavedCardList() {
 				<li>
 					<MoviesCard icon="delete" />
 				</li>
-				<li>
+				{/* <li>
 					<MoviesCard icon="delete" />
-				</li>
+				</li> */}
 			</ul>
 		</>
 	);

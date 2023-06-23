@@ -68,3 +68,31 @@
 		right: 207px;
 	}
 }
+
+@media screen and (max-width: 320px) {
+	.search-form {
+		max-width: 296px;
+		margin-left: 10px;
+	}
+
+	.search-form__input {
+		width: 262px;
+		line-height: 1.142;
+		padding: 0 19px;
+		margin: 77px auto 109px;
+	}
+
+	.search-form__input::placeholder {
+		font-size: 14px;
+		background: none;
+	}
+
+	.search-form__button {
+		top: 96px;
+		right: 15px;
+	}
+
+	.search-form__line {
+		display: none;
+	}
+}

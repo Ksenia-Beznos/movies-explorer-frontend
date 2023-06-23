@@ -4,7 +4,7 @@ import SearchForm from '../SearchForm/SearchForm';
 import MoviesCardList from '../MoviesCardList/MoviesCardList';
 
 function Movies() {
-	const [countCards, setCountCards] = React.useState(8);
+	const [countCards, setCountCards] = React.useState(5);
 	// const [windowSize, setWindowSize] = React.useState(320);
 
 	// React.useEffect(() => {
