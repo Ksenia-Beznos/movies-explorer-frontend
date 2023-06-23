@@ -58,3 +58,10 @@
 	background-color: #3ddc84;
 	left: 2px;
 }
+
+@media screen and (max-width: 768px) {
+	.checkbox {
+		top: 102px;
+		right: 18px;
+	}
+}

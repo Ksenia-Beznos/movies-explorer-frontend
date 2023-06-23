@@ -1,48 +1,20 @@
 import React from 'react';
 import './MoviesCardList.css';
-import MoviesCard from "../MoviesCard/MoviesCard";
+import MoviesCard from '../MoviesCard/MoviesCard';
 
-function MoviesCardList() {
+const moviesCards = Array.from({ length: 24 }, () => (
+	<li>
+		<MoviesCard icon="like" />
+	</li>
+));
+
+function MoviesCardList(props) {
+	console.log(props.count);
+	const filterMoviesCards = moviesCards.slice(0, props.count);
+
 	return (
 		<>
-			<ul className="movies__list">
-				<li>
-					<MoviesCard icon="like" />
-				</li>
-				<li>
-					<MoviesCard icon="like" />
-				</li>
-				<li>
-					<MoviesCard icon="like" />
-				</li>
-				<li>
-					<MoviesCard icon="like" />
-				</li>
-				<li>
-					<MoviesCard icon="like" />
-				</li>
-				<li>
-					<MoviesCard icon="like" />
-				</li>
-				<li>
-					<MoviesCard icon="like" />
-				</li>
-				<li>
-					<MoviesCard icon="like" />
-				</li>
-				<li>
-					<MoviesCard icon="like" />
-				</li>
-				<li>
-					<MoviesCard icon="like" />
-				</li>
-				<li>
-					<MoviesCard icon="like" />
-				</li>
-				<li>
-					<MoviesCard icon="like" />
-				</li>
-			</ul>
+			<ul className="movies__list">{filterMoviesCards}</ul>
 		</>
 	);
 }

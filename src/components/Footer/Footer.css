@@ -1,12 +1,11 @@
 .footer {
 	max-width: 1280px;
 	margin: 0 auto;
-	min-height: 172px;
 }
 
 .footer__text {
 	margin: 0 auto;
-	width: 320px;
+	width: 1140px;
 	font-size: 13px;
 	font-weight: 400;
 	line-height: 1.2;
@@ -62,11 +61,10 @@
 	.footer__text {
 		width: 708px;
 		text-align: center;
-		padding: 43px 0 20px;
+		padding: 80px 0 20px;
 	}
 
 	.footer__end {
 		max-width: 708px;
 	}
-
 }

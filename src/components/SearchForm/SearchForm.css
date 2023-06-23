@@ -46,3 +46,25 @@
 	top: 86px;
 	right: 226px;
 }
+
+@media screen and (max-width: 768px) {
+	.search-form {
+		max-width: 708px;
+		margin-left: 30px;
+	}
+
+	.search-form__input {
+		width: 645px;
+		margin: 77px auto 109px;
+	}
+
+	.search-form__button {
+		top: 95px;
+		right: 227px;
+	}
+
+	.search-form__line {
+		top: 93px;
+		right: 207px;
+	}
+}

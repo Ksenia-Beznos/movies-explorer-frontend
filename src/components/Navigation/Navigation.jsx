@@ -4,22 +4,22 @@ import { NavLink } from 'react-router-dom';
 
 function Navigation() {
 	return (
-		<>
-			<div className="header__movies">
-				<NavLink to="/movies" className="header__movies-all">
+		<div className="navigation">
+			<div className="navigation__movies">
+				<NavLink to="/movies" className="navigation__movies-all">
 					Фильмы
 				</NavLink>
-				<NavLink to="/saved-movies" className="header__movies-saved">
+				<NavLink to="/saved-movies" className="navigation__movies-saved">
 					Сохранённые фильмы
 				</NavLink>
 			</div>
-			<div className="profile">
-				<NavLink to="/profile" className="profile__link">
+			<div className="navigation__profile">
+				<NavLink to="/profile" className="navigation__profile-link">
 					Аккаунт
 				</NavLink>
-				<div className="profile__icon" />
+				<div className="navigation__profile-icon" />
 			</div>
-		</>
+		</div>
 	);
 }
 

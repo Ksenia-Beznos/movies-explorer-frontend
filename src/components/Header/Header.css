@@ -70,10 +70,10 @@
 @media screen and (max-width: 768px) {
 	.header__container {
 		max-width: 768px;
-		padding: 16px 0;
+		padding: 18px 0;
 	}
 
-	.header__container_style_bkg{
-		margin: 0 30px
+	.header__container_style_bkg {
+		margin: 0 30px;
 	}
 }

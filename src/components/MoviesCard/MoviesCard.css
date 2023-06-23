@@ -6,7 +6,7 @@
 	box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.08);
 }
 
-.element__item:hover{
+.element__item:hover {
 	cursor: pointer;
 }
 
@@ -59,7 +59,6 @@
 	cursor: pointer;
 }
 
-
 .element__delete-button {
 	background: url(../../images/delete.svg) transparent no-repeat center;
 	outline: none;
@@ -69,4 +68,27 @@
 	height: 14px;
 	color: #424242;
 	cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+	.element__item {
+		max-width: 339px;
+		height: 262px;
+	}
+
+	.element__image {
+		width: 339px;
+		height: 190px;
+	}
+
+	.element__description-group {
+		margin: 14px 14px 15px;
+
+		gap: 21px;
+		max-width: 303px;
+	}
+
+	.element__title {
+		max-width: 260px;
+	}
 }
