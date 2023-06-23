@@ -86,4 +86,18 @@
 	.header__container_style_bkg {
 		margin: 0 14px;
 	}
+
+	.header__links {
+		gap: 14px;
+	}
+
+	.header__link-register {
+		font-size: 10px;
+	}
+
+	.header__link-button {
+		width: 54px;
+		height: 26px;
+		font-size: 10px;
+	}
 }

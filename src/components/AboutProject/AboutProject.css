@@ -14,7 +14,7 @@
 	letter-spacing: -0.9px;
 }
 
-.project__descriptions {
+.project__chart {
 	margin: 70px 70px 110px;
 	display: flex;
 	flex-wrap: wrap;
@@ -85,7 +85,7 @@
 		width: 668px;
 	}
 
-	.project__descriptions {
+	.project__chart {
 		margin: 70px 50px 94px;
 		column-gap: 30px;
 	}
@@ -107,5 +107,56 @@
 	.timing {
 		margin: 0 50px 90px;
 		grid-template-columns: 140px 528px;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.project {
+		max-width: 320px;
+	}
+
+	.project__header {
+		padding: 70px 0 28px 0;
+		width: 284px;
+		font-size: 18px;
+	}
+
+	.project__chart {
+		margin: 60px 18px;
+	}
+
+	.project__stages {
+		display: flex;
+		flex-direction: column;
+
+		margin-bottom: 56px;
+	}
+
+	.project__title {
+		font-size: 18px;
+		margin-bottom: 16px;
+		letter-spacing: -0.7px;
+	}
+
+	.project__description {
+		width: 284px;
+	}
+
+	.project__subtitle {
+		font-size: 11px;
+	}
+
+	.timing {
+		margin: 0 18px 70px;
+		row-gap: 8px;
+		grid-template-columns: 100px 184px;
+	}
+
+	.timing__week {
+		font-size: 11px;
+	}
+
+	.timing__task {
+		font-size: 11px;
 	}
 }

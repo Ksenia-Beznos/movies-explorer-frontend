@@ -104,3 +104,47 @@
 		height: 307px;
 	}
 }
+
+@media screen and (max-width: 768px) {
+	.student {
+		max-width: 320px;
+	}
+
+	.student__header {
+		padding: 70px 0 28px 0;
+		width: 292px;
+		font-size: 18px;
+		letter-spacing: -0.8px;
+	}
+
+	.student__photo {
+		top: 181px;
+		right: 14px;
+		width: 292px;
+		height: 352px;
+	}
+
+	.student__name {
+		margin: 454px auto 24px;
+		max-width: 292px;
+		font-size: 30px;
+		letter-spacing: -1px;
+	}
+
+	.student__course {
+		margin: 0 auto 20px;
+		max-width: 292px;
+		font-size: 11px;
+	}
+
+	.student__description {
+		margin: 0 auto 40px;
+		max-width: 292px;
+		font-size: 11px;
+		line-height: 1.45;
+	}
+
+	.student__github {
+		margin: 0 auto 0 14px;
+	}
+}

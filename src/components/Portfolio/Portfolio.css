@@ -68,10 +68,39 @@
 		font-size: 28px;
 		line-height: 1.8;
 		letter-spacing: -1.1px;
-
 	}
 
 	.portfolio__list-item {
 		width: 668px;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.portfolio {
+		max-width: 320px;
+		margin: 0 14px 51px;
+	}
+
+	.portfolio__header {
+		margin: 70px auto 24px;
+		font-size: 14px;
+	}
+
+	.portfolio__sites {
+		margin: 0 auto;
+	}
+
+	.portfolio__site {
+		width: 292px;
+		font-size: 18px;
+		line-height: 1.55;
+		letter-spacing: -0.8px;
+		align-items: center;
+	}
+
+	.portfolio__arrow {
+		padding-right: 6px;
+		width: 9px;
+		height: 11px;
 	}
 }
