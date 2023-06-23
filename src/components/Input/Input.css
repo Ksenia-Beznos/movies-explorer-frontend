@@ -7,11 +7,9 @@
 .form__input {
 	width: 366px;
 	height: 46px;
-	padding: 0;
 	margin: 0 auto 20px;
 	padding: 0 15px 0;
 	outline: none;
-	/* margin: 70px auto; */
 	border-radius: 8px;
 	background-color: #2f2f2f;
 	border: none;
@@ -29,4 +27,10 @@
 	line-height: 1.21;
 	margin-bottom: 10px;
 	color: #8b8b8b;
+}
+
+@media screen and (max-width: 320px) {
+	.form__input {
+		width: 230px;
+	}
 }

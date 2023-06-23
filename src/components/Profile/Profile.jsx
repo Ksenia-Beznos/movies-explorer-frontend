@@ -11,7 +11,7 @@ function Profile() {
 				<p className="profile-page__text profile-page__text_style_font">Ксения</p>
 			</div>
 			<div className="profile-page__email">
-				<p className="profile-page__placeholder profile-page__placeholder_style_font">Email</p>
+				<p className="profile-page__placeholder profile-page__placeholder_style_font">E-mail</p>
 				<p className="profile-page__text profile-page__text_style_font">pochta@mail.ru</p>
 			</div>
 			<div className="profile-page__links">

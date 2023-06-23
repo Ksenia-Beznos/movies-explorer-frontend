@@ -6,7 +6,7 @@ function Edit() {
 	return (
 		<>
 			<Form
-				title="Редактирование профиля"
+				title="Редактирование"
 				buttonText="Сохранить"
 				text="Передумали?"
 				linkText="Вернуться на главную"

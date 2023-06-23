@@ -95,3 +95,36 @@
 		padding: 17px 0 212px;
 	}
 }
+
+@media screen and (max-width: 320px) {
+	.profile-page {
+		max-width: 768px;
+		padding: 66px 0 40px;
+	}
+
+	.profile-page__title {
+		margin: 0 auto 81px;
+	}
+
+	.profile-page__name {
+		max-width: 260px;
+		gap: 10px;
+		padding-bottom: 16px;
+	}
+
+	.profile-page__email {
+		max-width: 260px;
+		gap: 10px;
+		padding: 17px 0 380px;
+	}
+
+	.profile-page__edit {
+		font-size: 12px;
+		font-weight: 400;
+	}
+
+	.profile-page__exit {
+		font-size: 12px;
+		
+	}
+}

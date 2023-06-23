@@ -48,3 +48,27 @@
 		padding: 407px 0 222px;
 	}
 }
+
+@media screen and (max-width: 320px) {
+	.page-404 {
+		max-width: 320px;
+		padding: 329px 0 30px;
+	}
+
+	.page-404__container {
+		gap: 10px;
+	}
+
+	.page-404__title {
+		font-size: 80px;
+	}
+
+	.page-404__subtitle {
+		font-size: 12px;
+	}
+
+	.page-404__link {
+		font-size: 12px;
+		padding-top: 274px;
+	}
+}

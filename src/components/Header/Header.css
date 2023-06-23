@@ -77,3 +77,13 @@
 		margin: 0 30px;
 	}
 }
+
+@media screen and (max-width: 320px) {
+	.header__container {
+		max-width: 320px;
+	}
+
+	.header__container_style_bkg {
+		margin: 0 14px;
+	}
+}
