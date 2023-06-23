@@ -80,3 +80,18 @@
 .profile-page__link:hover {
 	opacity: 0.7;
 }
+
+@media screen and (max-width: 768px) {
+	.profile-page {
+		max-width: 768px;
+		padding: 232px 0 268px;
+	}
+
+	.profile-page__title {
+		margin: 0 auto 96px;
+	}
+
+	.profile-page__email {
+		padding: 17px 0 212px;
+	}
+}
