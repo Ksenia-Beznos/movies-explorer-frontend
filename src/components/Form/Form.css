@@ -115,12 +115,12 @@
 		text-align: center;
 	}
 
-	.form__container {
+	/* .form__container {
 		min-height: 423px;
-	}
+	} */
 
 	.form__submit-button_style_min-size {
-		margin-top: 157px;
+		margin-top: 158px;
 	}
 
 	.form__submit-button_style_max-size {

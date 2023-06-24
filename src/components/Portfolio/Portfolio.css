@@ -52,6 +52,7 @@
 @media screen and (max-width: 768px) {
 	.portfolio {
 		max-width: 768px;
+		margin: 0 auto;
 	}
 
 	.portfolio__header {
@@ -60,7 +61,7 @@
 	}
 
 	.portfolio__sites {
-		margin: 0 auto 90px 50px;
+		margin: 0 auto 70px 50px;
 		column-gap: 200px;
 	}
 	.portfolio__site {
@@ -102,5 +103,9 @@
 		padding-right: 6px;
 		width: 9px;
 		height: 11px;
+	}
+
+	.portfolio__list-item {
+		width: 292px;
 	}
 }

@@ -25,12 +25,20 @@
 }
 
 @media screen and (max-width: 768px) {
+	.movies {
+		width: 768px;
+	}
+
 	.movies__button {
 		margin: 50px 224px 80px;
 	}
 }
 
 @media screen and (max-width: 320px) {
+	.movies {
+		width: 320px;
+	}
+
 	.movies__button {
 		margin: 50px 40px 80px;
 		width: 240px;

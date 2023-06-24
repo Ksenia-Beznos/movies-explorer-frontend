@@ -2,6 +2,7 @@
 	margin: 0 auto;
 	color: white;
 	box-sizing: border-box;
+	/* overflow: hidden; */
 	text-rendering: optimizeLegibility;
 	-moz-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;

@@ -64,14 +64,14 @@
 	}
 
 	.promo__image {
-		top: 140px;
+		top: 137px;
 		left: 229px;
 	}
 
 	.promo__header {
 		text-align: center;
-		padding-top: 475px;
-		margin: 0 44px 22px;
+		padding-top: 472px;
+		margin: 0 auto 22px;
 		width: 680px;
 		font-size: 40px;
 		line-height: 1.25;
@@ -84,7 +84,7 @@
 	}
 
 	.promo__button {
-		margin: 0 320px 58px;
+		margin: 0 319px 58px;
 	}
 }
 
