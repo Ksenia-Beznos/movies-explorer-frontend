@@ -47,6 +47,12 @@
 	border-radius: 4px;
 }
 
+@media screen and (max-width: 1279px) {
+	.navigation__movies {
+		margin: 0 100px;
+	}
+}
+
 @media screen and (max-width: 768px) {
 	.navigation {
 		display: none;

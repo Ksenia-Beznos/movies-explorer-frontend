@@ -67,8 +67,19 @@
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
+@media (min-width: 769px) and (max-width: 1279px) {
+	.header__container {
+		max-width: calc(708px + (1140 - 708) * ((100vw - 768px) / (1280 - 768)));
+	}
+
+	.header__container_style_bkg {
+		margin: 0 auto;
+	}
+}
+
 @media screen and (max-width: 768px) {
 	.header__container {
+		display: flex;
 		max-width: 768px;
 		padding: 18px 0;
 	}
@@ -80,7 +91,7 @@
 
 @media screen and (max-width: 500px) {
 	.header__container {
-		max-width: 320px;
+		max-width: 500px;
 	}
 
 	.header__container_style_bkg {

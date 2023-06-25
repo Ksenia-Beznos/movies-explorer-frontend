@@ -66,10 +66,20 @@
 	}
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 767px) {
 	.checkbox {
 		top: 193px;
-		right: 70px;
+		left: 0;
+	}
+
+	.checkbox__inner {
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.checkbox {
+		left: 76px;
 	}
 
 	.checkbox__inner {
