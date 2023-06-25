@@ -96,7 +96,7 @@
 	}
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 506px) {
 	.form {
 		max-width: 260px;
 	}
@@ -114,10 +114,6 @@
 		margin: 0 auto 80px;
 		text-align: center;
 	}
-
-	/* .form__container {
-		min-height: 423px;
-	} */
 
 	.form__submit-button_style_min-size {
 		margin-top: 158px;

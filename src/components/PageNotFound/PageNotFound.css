@@ -35,7 +35,7 @@
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 1.21;
-	padding-top: 180px;
+	margin-top: 180px;
 }
 
 .page-404__link:hover {
@@ -69,6 +69,6 @@
 
 	.page-404__link {
 		font-size: 12px;
-		padding-top: 274px;
+		margin-top: 274px;
 	}
 }

@@ -60,7 +60,7 @@
 	right: 70px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1279px) {
 	.student {
 		max-width: 768px;
 	}
@@ -105,7 +105,47 @@
 	}
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 767px) {
+	.student {
+		max-width: 460px;
+	}
+
+	.student__header {
+		width: 460px;
+	}
+
+	.student__photo {
+		right: 84px;
+		width: 292px;
+		height: 352px;
+	}
+
+	.student__course {
+		margin: 0 auto 20px;
+		max-width: 460px;
+		font-size: 15px;
+	}
+
+	.student__github {
+		margin: 0 auto;
+	}
+
+	.student__name {
+		margin: 454px auto 24px;
+		max-width: 460px;
+		font-size: 30px;
+		letter-spacing: -1px;
+	}
+
+	.student__description {
+		margin: 0 auto 40px;
+		max-width: 460px;
+		font-size: 13px;
+		line-height: 1.45;
+	}
+}
+
+@media screen and (max-width: 500px) {
 	.student {
 		max-width: 320px;
 	}
@@ -120,28 +160,20 @@
 	.student__photo {
 		top: 181px;
 		right: 14px;
-		width: 292px;
-		height: 352px;
 	}
 
 	.student__name {
-		margin: 454px auto 24px;
 		max-width: 292px;
-		font-size: 30px;
-		letter-spacing: -1px;
 	}
 
 	.student__course {
-		margin: 0 auto 20px;
 		max-width: 292px;
 		font-size: 11px;
 	}
 
 	.student__description {
-		margin: 0 auto 40px;
 		max-width: 292px;
 		font-size: 11px;
-		line-height: 1.45;
 	}
 
 	.student__github {
