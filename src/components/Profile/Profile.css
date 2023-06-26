@@ -96,10 +96,16 @@
 	}
 }
 
+@media screen and (max-width: 500px) {
+	.profile-page {
+		max-width: 280px;
+		padding: 66px 0 40px;
+	}
+}
+
 @media screen and (max-width: 320px) {
 	.profile-page {
-		max-width: 768px;
-		padding: 66px 0 40px;
+		max-width: 320px;
 	}
 
 	.profile-page__title {
@@ -125,6 +131,5 @@
 
 	.profile-page__exit {
 		font-size: 12px;
-		
 	}
 }
