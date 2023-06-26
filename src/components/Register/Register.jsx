@@ -4,6 +4,8 @@ import Form from '../Form/Form';
 
 function Register() {
 	return (
+
+
 		<>
 			<Form
 				title="Добро пожаловать!"
