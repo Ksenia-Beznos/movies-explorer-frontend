@@ -18,22 +18,4 @@ function MoviesSavedCardList(props) {
 	);
 }
 
-// function MoviesSavedCardList() {
-// 	return (
-// 		<>
-// 			<ul className="movies-saved__list">
-// 				<li>
-// 					<MoviesCard icon="delete" />
-// 				</li>
-// 				<li>
-// 					<MoviesCard icon="delete" />
-// 				</li>
-// 				{/* <li>
-// 					<MoviesCard icon="delete" />
-// 				</li> */}
-// 			</ul>
-// 		</>
-// 	);
-// }
-
 export default MoviesSavedCardList;

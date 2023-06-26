@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import webworld from '../../images/webworld.svg';
 import './Promo.css';
 
@@ -12,9 +13,11 @@ function Promo() {
 				</p>
 				<img className="promo__image" src={webworld} alt="Иллюстрация планеты" />
 
-				<button className="promo__button" type="button" aria-label="Узнать больше">
-					Узнать больше
-				</button>
+				<NavLink to="/signup">
+					<button className="promo__button" type="button" aria-label="Узнать больше">
+						Узнать больше
+					</button>
+				</NavLink>
 			</div>
 		</div>
 	);
