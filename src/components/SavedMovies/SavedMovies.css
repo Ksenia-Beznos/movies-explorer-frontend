@@ -3,7 +3,7 @@
 	margin: 0 auto;
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
 	.movies-saved {
 		max-width: 768px;
 	}
@@ -12,5 +12,48 @@
 @media screen and (max-width: 320px) {
 	.movies-saved {
 		max-width: 320px;
+	}
+} */
+
+
+@media screen and (max-width: 1279px) {
+	.movies-saved {
+		width: 768px;
+	}
+
+	.movies__button-saved {
+		margin: 50px 224px 80px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.movies-saved  {
+		max-width: 700px;
+	}
+
+	.movies__button-saved  {
+		margin: 50px 200px 80px;
+		width: 300px;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.movies-saved {
+		max-width: 300px;
+	}
+
+	.movies__button-saved {
+		margin: 50px 0 54px;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.movies-saved {
+		width: 320px;
+	}
+
+	.movies__button-saved {
+		margin: 50px 30px 54px;
+		width: 240px;
 	}
 }

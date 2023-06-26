@@ -9,7 +9,6 @@ const moviesCards = Array.from({ length: 24 }, () => (
 ));
 
 function MoviesCardList(props) {
-	console.log(props.count);
 	const filterMoviesCards = moviesCards.slice(0, props.count);
 
 	return (
