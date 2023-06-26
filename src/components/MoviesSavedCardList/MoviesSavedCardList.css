@@ -29,7 +29,6 @@
 	.movies-saved__list {
 		grid-template-columns: repeat(1, 300px);
 		grid-template-rows: repeat(2, 237px);
-		gap: 30px;
 		margin: 50px 0 26px;
 		justify-content: center;
 	}
