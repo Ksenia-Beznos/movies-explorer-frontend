@@ -92,35 +92,7 @@
 	}
 }
 
-
 @media screen and (max-width: 767px) {
-	.element__item {
-		width: 300px;
-		height: 237px;
-	}
-
-	.element__image {
-		width: 300px;
-		height: 168px;
-	}
-
-	.element__description-group {
-		gap: 6px;
-		max-width: 268px;
-	}
-
-	.element__title {
-		font-size: 12px;
-		max-width: 240px;
-	}
-
-	.element__duration {
-		font-size: 10px;
-		margin-left: 14px;
-	}
-}
-
-@media screen and (max-width: 320px) {
 	.element__item {
 		width: 300px;
 		height: 237px;

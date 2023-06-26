@@ -3,7 +3,7 @@
 	max-width: 1140px;
 	position: relative;
 	border-bottom: 1px #424242 solid;
-	margin-left: 70px;
+	margin: 0 auto ;
 }
 
 .search-form__input {
