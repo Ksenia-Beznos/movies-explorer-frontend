@@ -3,7 +3,7 @@ import './MoviesCardList.css';
 import MoviesCard from '../MoviesCard/MoviesCard';
 
 const moviesCards = Array.from({ length: 24 }, () => (
-	<li>
+	<li className="movies__container">
 		<MoviesCard icon="like" />
 	</li>
 ));

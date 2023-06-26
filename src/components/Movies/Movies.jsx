@@ -35,16 +35,17 @@ function Movies() {
 
 	// handleWindowResize();
 
-
 	return (
-		<div className="movies">
+		<>
 			<SearchForm />
-			<MoviesCardList count={countCards} />
+			<div className="movies">
+				<MoviesCardList count={countCards} />
 
-			<button className="movies__button" onClick={addCards} type="button">
-				Ещё
-			</button>
-		</div>
+				<button className="movies__button" onClick={addCards} type="button">
+					Ещё
+				</button>
+			</div>
+		</>
 	);
 }
 
