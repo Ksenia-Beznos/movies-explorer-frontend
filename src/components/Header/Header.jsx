@@ -3,6 +3,7 @@ import { Route, Routes, NavLink } from 'react-router-dom';
 import './Header.css';
 import logo from '../../images/logo.svg';
 import Navigation from '../Navigation/Navigation';
+import BurgerMenu from '../BurgerMenu/BurgerMenu';
 
 function Header({ color }) {
 	return (
@@ -12,6 +13,8 @@ function Header({ color }) {
 					<NavLink to="/">
 						<img className="header__logo" src={logo} alt="Логотип" />
 					</NavLink>
+
+					<BurgerMenu />
 
 					<Routes>
 						<Route

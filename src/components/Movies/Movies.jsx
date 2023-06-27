@@ -10,7 +10,6 @@ function Movies() {
 		setCountCards(countCards + 4);
 	}
 
-
 	return (
 		<>
 			<SearchForm />
