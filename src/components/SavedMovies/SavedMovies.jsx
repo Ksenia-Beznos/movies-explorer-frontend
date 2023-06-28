@@ -4,7 +4,7 @@ import MoviesSavedCardList from '../MoviesSavedCardList/MoviesSavedCardList';
 import SearchForm from '../SearchForm/SearchForm';
 
 function SavedMovies() {
-	const [countCards, setCountCards] = React.useState(3);
+	const [countCards, setCountCards] = React.useState(2);
 
 	function addCards() {
 		setCountCards(countCards + 4);

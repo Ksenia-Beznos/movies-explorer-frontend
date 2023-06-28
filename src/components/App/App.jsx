@@ -11,6 +11,7 @@ import PageNotFound from '../PageNotFound/PageNotFound';
 import Register from '../Register/Register';
 import Login from '../Login/Login';
 import Edit from '../Edit/Edit';
+import BurgerMenu from '../BurgerMenu/BurgerMenu';
 
 function App() {
 	const location = useLocation();
@@ -29,9 +30,9 @@ function App() {
 
 			<Routes>
 				<Route path="/" element={<Main />} />
-				<Route path="/movies" element={<Movies />} />
-				<Route path="/saved-movies" element={<SavedMovies />} />
-				<Route path="/profile" element={<Profile />} />
+				<Route path="/movies" element={[<Movies />, <BurgerMenu/>]} />
+				<Route path="/saved-movies" element={[<SavedMovies />, <BurgerMenu/>]} />
+				<Route path="/profile" element={[<Profile />, <BurgerMenu/>]} />
 				<Route path="/signin" element={<Login />} />
 				<Route path="/signup" element={<Register />} />
 				<Route path="/edit" element={<Edit />} />

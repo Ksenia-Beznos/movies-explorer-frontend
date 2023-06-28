@@ -82,10 +82,12 @@
 		display: flex;
 		max-width: 768px;
 		padding: 18px 0;
+		position: relative;
 	}
 
 	.header__container_style_bkg {
 		margin: 0 30px;
+		width: 100%;
 	}
 }
 

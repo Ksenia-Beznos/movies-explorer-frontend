@@ -3,13 +3,16 @@ import './Navigation.css';
 import { NavLink } from 'react-router-dom';
 
 function Navigation() {
+	const setActive = ({ isActive }) =>
+		isActive ? 'navigation__link-active' : 'navigation__movies-link';
+
 	return (
 		<div className="navigation">
-			<div className="navigation__movies">
-				<NavLink to="/movies" className="navigation__movies-all">
+			<div className="navigation__movies ">
+				<NavLink to="/movies" className={setActive}>
 					Фильмы
 				</NavLink>
-				<NavLink to="/saved-movies" className="navigation__movies-saved">
+				<NavLink to="/saved-movies" className={setActive}>
 					Сохранённые фильмы
 				</NavLink>
 			</div>
