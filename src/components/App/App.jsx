@@ -29,9 +29,9 @@ function App() {
 			{headerVisibleHomePage && <Header color={'header_style_color'} />}
 			<Routes>
 				<Route path="/" element={<Main />} />
-				<Route path="/movies" element={[<Movies />, <BurgerMenu/>]} />
-				<Route path="/saved-movies" element={[<SavedMovies />, <BurgerMenu/>]} />
-				<Route path="/profile" element={[<Profile />, <BurgerMenu/>]} />
+				<Route path="/movies" element={[<Movies />, <BurgerMenu />]} />
+				<Route path="/saved-movies" element={[<SavedMovies />, <BurgerMenu />]} />
+				<Route path="/profile" element={[<Profile />, <BurgerMenu />]} />
 				<Route path="/signin" element={<Login />} />
 				<Route path="/signup" element={<Register />} />
 				<Route path="/edit" element={<Edit />} />
