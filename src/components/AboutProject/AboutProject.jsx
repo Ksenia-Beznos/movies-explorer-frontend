@@ -23,8 +23,8 @@ function AboutProject() {
 					</div>
 				</div>
 				<div className="timing">
-					<p className="timing__week timing__week_color_green">1 неделя</p>
-					<p className="timing__week timing__week_color_grey">4 недели</p>
+					<p className="timing__week timing__week-color-green">1 неделя</p>
+					<p className="timing__week timing__week-color-grey">4 недели</p>
 					<p className="timing__task">Back-end</p>
 					<p className="timing__task">Front-end</p>
 				</div>

@@ -2,7 +2,7 @@
 	margin: 0 auto;
 }
 
-.header_style_color {
+.header__color {
 	width: 100%;
 	background-color: #073042;
 }
@@ -13,7 +13,7 @@
 	max-width: 1280px;
 }
 
-.header__container_style_bkg {
+.header__container-bkg {
 	display: flex;
 	margin: 0 70px;
 	align-items: center;
@@ -72,7 +72,7 @@
 		max-width: calc(708px + (1140 - 708) * ((100vw - 768px) / (1280 - 768)));
 	}
 
-	.header__container_style_bkg {
+	.header__container-bkg {
 		margin: 0 auto;
 	}
 }
@@ -85,7 +85,7 @@
 		position: relative;
 	}
 
-	.header__container_style_bkg {
+	.header__container-bkg {
 		margin: 0 30px;
 		width: 100%;
 	}
@@ -96,7 +96,7 @@
 		max-width: 500px;
 	}
 
-	.header__container_style_bkg {
+	.header__container-bkg {
 		margin: 0 14px;
 	}
 

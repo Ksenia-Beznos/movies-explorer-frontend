@@ -20,7 +20,7 @@ function Login() {
 			text="Еще не зарегистрированы?"
 			linkText="Регистрация"
 			path="/signup"
-			size="form__submit-button_style_max-size"
+			size="form__submit-button-max-size"
 			handleSubmit={handleSubmit}
 			reset={reset}
 			isValid={isValid}

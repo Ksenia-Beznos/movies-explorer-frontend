@@ -35,11 +35,11 @@
 	line-height: 1.21;
 }
 
-.form__submit-button_style_min-size {
+.form__submit-button-min-size {
 	margin-top: 69px;
 }
 
-.form__submit-button_style_max-size {
+.form__submit-button-max-size {
 	margin-top: 158px;
 }
 
@@ -115,11 +115,11 @@
 		text-align: center;
 	}
 
-	.form__submit-button_style_min-size {
+	.form__submit-button-min-size {
 		margin-top: 158px;
 	}
 
-	.form__submit-button_style_max-size {
+	.form__submit-button-max-size {
 		margin-top: 247px;
 	}
 

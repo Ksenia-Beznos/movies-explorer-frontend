@@ -20,7 +20,7 @@ function Edit() {
 			text="Передумали?"
 			linkText="Вернуться на главную"
 			path="/movies"
-			size="form__submit-button_style_max-size"
+			size="form__submit-button-max-size"
 			handleSubmit={handleSubmit}
 			reset={reset}
 			isValid={isValid}

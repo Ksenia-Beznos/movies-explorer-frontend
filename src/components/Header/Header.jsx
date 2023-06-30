@@ -8,7 +8,7 @@ function Header({ color }) {
 	return (
 		<header className={`header ${color}`}>
 			<div className="header__container">
-				<div className="header__container_style_bkg">
+				<div className="header__container-bkg ">
 					<NavLink to="/">
 						<img className="header__logo" src={logo} alt="Логотип" />
 					</NavLink>

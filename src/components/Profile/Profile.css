@@ -39,13 +39,13 @@
 	margin: 0;
 }
 
-.profile-page__placeholder_style_font {
+.profile-page__placeholder-font {
 	font-size: 11px;
 	font-weight: 500;
 	line-height: 1.21;
 }
 
-.profile-page__text_style_font {
+.profile-page__text-font {
 	font-size: 11px;
 	font-weight: 400;
 	line-height: 1.21;

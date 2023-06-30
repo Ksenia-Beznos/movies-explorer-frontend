@@ -20,7 +20,7 @@ function Register() {
 			text="Уже зарегистрированы?"
 			linkText="Войти"
 			path="/signin"
-			size="form__submit-button_style_min-size"
+			size="form__submit-button-min-size"
 			handleSubmit={handleSubmit}
 			reset={reset}
 			isValid={isValid}

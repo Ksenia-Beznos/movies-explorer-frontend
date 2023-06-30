@@ -26,7 +26,7 @@ function App() {
 	return (
 		<div className="app">
 			{headerVisible && <Header />}
-			{headerVisibleHomePage && <Header color={'header_style_color'} />}
+			{headerVisibleHomePage && <Header color={'header__color'} />}
 			<Routes>
 				<Route path="/" element={<Main />} />
 				<Route path="/movies" element={[<Movies />, <BurgerMenu />]} />

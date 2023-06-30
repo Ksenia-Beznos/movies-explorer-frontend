@@ -21,7 +21,7 @@
 		transition: visibility 1s, right 1s ease;
 	}
 
-	.menu_active {
+	.menu-active {
 		right: 0;
 		visibility: visible;
 	}
@@ -92,7 +92,7 @@
 		display: none;
 	}
 
-	.overlay_open {
+	.overlay-open {
 		display: flex;
 		opacity: 1;
 		visibility: visible;

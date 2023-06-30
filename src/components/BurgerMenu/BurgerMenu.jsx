@@ -8,9 +8,9 @@ function BurgerMenu() {
 	const overlayRef = useRef(null);
 
 	function toggleMenu() {
-		MenuRef.current.classList.toggle('menu_active');
+		MenuRef.current.classList.toggle('menu-active');
 		MenuBtnRef.current.classList.toggle('menu__btn-open');
-		overlayRef.current.classList.toggle('overlay_open');
+		overlayRef.current.classList.toggle('overlay-open');
 	}
 
 	const setActive = ({ isActive }) => (isActive ? 'menu__link-active' : 'menu__link');

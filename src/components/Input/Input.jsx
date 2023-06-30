@@ -26,7 +26,7 @@ function Input(props) {
 				required
 				autoComplete='off'
 			/>
-			<span className={`form__input-error ${props.errors ? 'form__input-error_show' : ''}`}>
+			<span className={`form__input-error ${props.errors ? 'form__input-error-show' : ''}`}>
 				{props.errors?.message || 'Что-то пошло не так'}
 			</span>
 		</div>
