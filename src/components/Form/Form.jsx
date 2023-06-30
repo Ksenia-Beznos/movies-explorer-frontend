@@ -10,7 +10,7 @@ function Form(props) {
 	};
 
 	return (
-		<div className="form">
+		<section className="form">
 			<div className="form__head">
 				<Link to="/">
 					<img className="form__logo" src={logo} alt="Логотип" />
@@ -35,7 +35,7 @@ function Form(props) {
 					{props.linkText}
 				</Link>
 			</div>
-		</div>
+		</section>
 	);
 }
 

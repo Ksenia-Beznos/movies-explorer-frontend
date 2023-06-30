@@ -13,13 +13,13 @@ function Movies() {
 	return (
 		<>
 			<SearchForm />
-			<div className="movies">
+			<section className="movies">
 				<MoviesCardList count={countCards} />
 
 				<button className="movies__button" onClick={addCards} type="button">
 					Ещё
 				</button>
-			</div>
+			</section>
 		</>
 	);
 }

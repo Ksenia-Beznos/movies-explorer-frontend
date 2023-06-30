@@ -4,7 +4,7 @@ import './Profile.css';
 
 function Profile() {
 	return (
-		<div className="profile-page">
+		<section className="profile-page">
 			<h3 className="profile-page__title">Привет, Ксения!</h3>
 			<div className="profile-page__name">
 				<p className="profile-page__placeholder profile-page__placeholder_style_font">Имя</p>
@@ -22,7 +22,7 @@ function Profile() {
 					Выйти из аккаунта
 				</NavLink>
 			</div>
-		</div>
+		</section>
 	);
 }
 

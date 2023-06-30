@@ -6,7 +6,7 @@ import Navigation from '../Navigation/Navigation';
 
 function Header({ color }) {
 	return (
-		<div className={`header ${color}`}>
+		<header className={`header ${color}`}>
 			<div className="header__container">
 				<div className="header__container_style_bkg">
 					<NavLink to="/">
@@ -35,7 +35,7 @@ function Header({ color }) {
 					</Routes>
 				</div>
 			</div>
-		</div>
+		</header>
 	);
 }
 

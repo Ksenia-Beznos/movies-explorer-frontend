@@ -13,12 +13,12 @@ function SavedMovies() {
 	return (
 		<>
 			<SearchForm />
-			<div className="movies-saved">
+			<section className="movies-saved">
 				<MoviesSavedCardList count={countCards} />
 				<button className="movies__button movies__button-saved" onClick={addCards} type="button">
 					Ещё
 				</button>
-			</div>
+			</section>
 		</>
 	);
 }

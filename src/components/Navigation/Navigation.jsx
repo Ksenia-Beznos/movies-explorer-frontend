@@ -7,7 +7,7 @@ function Navigation() {
 		isActive ? 'navigation__link-active' : 'navigation__movies-link';
 
 	return (
-		<div className="navigation">
+		<section className="navigation">
 			<div className="navigation__movies ">
 				<NavLink to="/movies" className={setActive}>
 					Фильмы
@@ -22,7 +22,7 @@ function Navigation() {
 				</NavLink>
 				<div className="navigation__profile-icon" />
 			</div>
-		</div>
+		</section>
 	);
 }
 

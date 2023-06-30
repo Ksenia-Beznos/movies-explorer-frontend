@@ -5,7 +5,7 @@ import './Promo.css';
 
 function Promo() {
 	return (
-		<div className="promo">
+		<section className="promo">
 			<div className="promo__container">
 				<h1 className="promo__header">Учебный проект студента факультета Веб&#8209;разработки.</h1>
 				<p className="promo__description">
@@ -19,7 +19,7 @@ function Promo() {
 					</button>
 				</NavLink>
 			</div>
-		</div>
+		</section>
 	);
 }
 

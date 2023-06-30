@@ -14,29 +14,21 @@ function Edit() {
 	});
 
 	return (
-		<>
-			<Form
-				title="Редактирование"
-				buttonText="Сохранить"
-				text="Передумали?"
-				linkText="Вернуться на главную"
-				path="/movies"
-				size="form__submit-button_style_max-size"
-				handleSubmit={handleSubmit}
-				reset={reset}
-				isValid={isValid}
-			>
-				<Input type="text" name="name" label="Имя" register={register} errors={errors?.name} />
+		<Form
+			title="Редактирование"
+			buttonText="Сохранить"
+			text="Передумали?"
+			linkText="Вернуться на главную"
+			path="/movies"
+			size="form__submit-button_style_max-size"
+			handleSubmit={handleSubmit}
+			reset={reset}
+			isValid={isValid}
+		>
+			<Input type="text" name="name" label="Имя" register={register} errors={errors?.name} />
 
-				<Input
-					type="email"
-					name="email"
-					label="E-mail"
-					register={register}
-					errors={errors?.email}
-				/>
-			</Form>
-		</>
+			<Input type="email" name="email" label="E-mail" register={register} errors={errors?.email} />
+		</Form>
 	);
 }
 

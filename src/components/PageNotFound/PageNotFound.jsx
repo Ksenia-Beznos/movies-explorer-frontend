@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 function PageNotFound() {
 	return (
-		<div className="page-404">
+		<section className="page-404">
 			<div className="page-404__container">
 				<h1 className="page-404__title">404</h1>
 				<p className="page-404__subtitle">Страница не найдена</p>
@@ -13,7 +13,7 @@ function PageNotFound() {
 					Назад
 				</NavLink>
 			</div>
-		</div>
+		</section>
 	);
 }
 

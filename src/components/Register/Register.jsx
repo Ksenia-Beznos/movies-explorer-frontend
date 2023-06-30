@@ -10,40 +10,32 @@ function Register() {
 		handleSubmit,
 		reset,
 	} = useForm({
-		mode: "onChange"
+		mode: 'onChange',
 	});
 
 	return (
-		<>
-			<Form
-				title="Добро пожаловать!"
-				buttonText="Зарегистрироваться"
-				text="Уже зарегистрированы?"
-				linkText="Войти"
-				path="/signin"
-				size="form__submit-button_style_min-size"
-				handleSubmit={handleSubmit}
-				reset={reset}
-				isValid={isValid}
-			>
-				<Input type="text" name="name" label="Имя" register={register} errors={errors?.name} />
+		<Form
+			title="Добро пожаловать!"
+			buttonText="Зарегистрироваться"
+			text="Уже зарегистрированы?"
+			linkText="Войти"
+			path="/signin"
+			size="form__submit-button_style_min-size"
+			handleSubmit={handleSubmit}
+			reset={reset}
+			isValid={isValid}
+		>
+			<Input type="text" name="name" label="Имя" register={register} errors={errors?.name} />
 
-				<Input
-					type="email"
-					name="email"
-					label="E-mail"
-					register={register}
-					errors={errors?.email}
-				/>
-				<Input
-					type="password"
-					name="password"
-					label="Пароль"
-					register={register}
-					errors={errors?.password}
-				/>
-			</Form>
-		</>
+			<Input type="email" name="email" label="E-mail" register={register} errors={errors?.email} />
+			<Input
+				type="password"
+				name="password"
+				label="Пароль"
+				register={register}
+				errors={errors?.password}
+			/>
+		</Form>
 	);
 }
 
