@@ -35,6 +35,21 @@
 	line-height: 1.21;
 }
 
+.form__submit-button_disabled {
+	width: 100%;
+	padding: 0;
+	border: none;
+	background-color: #4285f4;
+	color: white;
+	height: 45px;
+	border-radius: 3px;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 1.21;
+	opacity: .7;
+	cursor: default;
+}
+
 .form__submit-button-min-size {
 	margin-top: 69px;
 }

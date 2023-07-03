@@ -19,10 +19,13 @@ function Form(props) {
 			<form className="form__container" onSubmit={props.handleSubmit(onSubmit)} noValidate>
 				{props.children}
 				<button
-					className={`form__submit-button ${props.size}`}
+					className={
+						props.isValid
+							? `form__submit-button ${props.size}`
+							: `form__submit-button_disabled ${props.size}`
+					}
 					type="submit"
 					aria-label={props.buttonText}
-					disabled={!props.isValid}
 				>
 					{props.buttonText}
 				</button>

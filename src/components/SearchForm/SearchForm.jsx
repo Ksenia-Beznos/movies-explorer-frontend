@@ -8,7 +8,7 @@ import { useForm } from 'react-hook-form';
 function SearchForm() {
 	const {
 		register,
-		formState: { errors },
+		formState: { errors, isValid },
 		handleSubmit,
 		reset,
 	} = useForm({
@@ -44,7 +44,10 @@ function SearchForm() {
 				</span>
 			)}
 
-			<button className="search-form__button" type="submit">
+			<button
+				type="submit"
+				className={isValid ? `search-form__button` : `search-form__button_disabled`}
+			>
 				<img src={find} alt="Кнопка в виде синей стрелки" />
 			</button>
 			<img className="search-form__line" src={line} alt="вертикальная линия" />
