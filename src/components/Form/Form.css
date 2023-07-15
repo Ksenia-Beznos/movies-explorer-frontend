@@ -18,13 +18,10 @@
 	line-height: 1.21;
 }
 
-.form__container {
-	min-height: 380px;
-}
-
 .form__submit-button {
 	width: 100%;
 	padding: 0;
+	margin-top: 20px;
 	border: none;
 	background-color: #4285f4;
 	color: white;
@@ -38,6 +35,7 @@
 .form__submit-button_disabled {
 	width: 100%;
 	padding: 0;
+	margin-top: 20px;
 	border: none;
 	background-color: #4285f4;
 	color: white;
@@ -46,16 +44,32 @@
 	font-size: 14px;
 	font-weight: 500;
 	line-height: 1.21;
-	opacity: .7;
+	opacity: 0.7;
 	cursor: default;
 }
 
-.form__submit-button-min-size {
-	margin-top: 69px;
+.form__error {
+	display: block;
+	font-size: 11px;
+	font-weight: 400;
+	color: #ff004c;
+	margin: 0;
+	/* padding-top: 125px; */
+	visibility: hidden;
+	text-align: center;
+	min-height: 13px;
 }
 
-.form__submit-button-max-size {
-	margin-top: 158px;
+.form__error-show {
+	visibility: visible;
+}
+
+.form__error-min-space {
+	padding-top: 37px;
+}
+
+.form__error-max-space {
+	padding-top: 125px;
 }
 
 .form__submit-button:hover {

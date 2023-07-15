@@ -41,7 +41,7 @@
 }
 
 .search-form__button_disabled {
-	opacity: .7;
+	opacity: .5;
 	cursor: default;
 	border: none;
 	background-color: transparent;

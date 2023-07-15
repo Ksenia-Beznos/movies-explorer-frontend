@@ -1,17 +1,37 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Input from '../Input/Input';
 import Form from '../Form/Form';
 import { useForm } from 'react-hook-form';
+import { CurrentUserContext } from '../../contexts/CurrentUserContext';
 
-function Edit() {
+function Edit(props) {
 	const {
 		register,
 		formState: { errors, isValid },
 		handleSubmit,
 		reset,
+		setValue,
+		watch,
 	} = useForm({
 		mode: 'onChange',
 	});
+
+	const currentUser = useContext(CurrentUserContext);
+
+	const [isChangeForm, setIsChangeForm] = useState(false);
+
+	useEffect(() => {
+		const nameChange = currentUser.name !== watch('name');
+		const emailChange = currentUser.email !== watch('email');
+		setIsChangeForm(nameChange || emailChange);
+	}, [watch('name'), watch('email')]);
+
+	useEffect(() => {
+		if (currentUser) {
+			setValue('name', currentUser.name);
+			setValue('email', currentUser.email);
+		}
+	}, [currentUser, setValue]);
 
 	return (
 		<Form
@@ -20,10 +40,12 @@ function Edit() {
 			text="Передумали?"
 			linkText="Вернуться на главную"
 			path="/movies"
-			size="form__submit-button-max-size"
+			size="form__error-max-space"
 			handleSubmit={handleSubmit}
 			reset={reset}
-			isValid={isValid}
+			isValid={isValid && isChangeForm}
+			handleSubmitForm={props.handleSubmitForm}
+			isMessage={props.isMessage}
 		>
 			<Input type="text" name="name" label="Имя" register={register} errors={errors?.name} />
 

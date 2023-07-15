@@ -2,21 +2,24 @@ import React from 'react';
 import './Movies.css';
 import SearchForm from '../SearchForm/SearchForm';
 import MoviesCardList from '../MoviesCardList/MoviesCardList';
+import MoviesCard from '../MoviesCard/MoviesCard';
 
-function Movies() {
-	const [countCards, setCountCards] = React.useState(5);
+function Movies(props) {
+	console.warn(props.movies)
+	const cardMovies = props.movies.map((element) => {
+		
+		return <MoviesCard movie={element} icon={'like'}/>;
+	});
 
-	function addCards() {
-		setCountCards(countCards + 4);
-	}
+console.log(cardMovies);
 
 	return (
 		<>
 			<SearchForm />
 			<section className="movies">
-				<MoviesCardList count={countCards} />
+				<MoviesCardList cardMovies={cardMovies} />
 
-				<button className="movies__button" onClick={addCards} type="button">
+				<button className="movies__button" type="button">
 					Ещё
 				</button>
 			</section>

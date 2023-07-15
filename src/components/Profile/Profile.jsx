@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Profile.css';
 
-function Profile() {
+function Profile(props) {
 	return (
 		<section className="profile-page">
 			<h3 className="profile-page__title">Привет, Ксения!</h3>
@@ -18,9 +18,9 @@ function Profile() {
 				<NavLink to="/edit" className="profile-page__link profile-page__edit">
 					Редактировать
 				</NavLink>
-				<NavLink to="/" className="profile-page__link profile-page__exit">
+				<button className="profile-page__link profile-page__exit" onClick={props.logout}>
 					Выйти из аккаунта
-				</NavLink>
+				</button>
 			</div>
 		</section>
 	);

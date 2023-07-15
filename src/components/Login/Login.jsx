@@ -3,7 +3,7 @@ import Input from '../Input/Input';
 import Form from '../Form/Form';
 import { useForm } from 'react-hook-form';
 
-function Login() {
+function Login(props) {
 	const {
 		register,
 		formState: { errors, isValid },
@@ -20,10 +20,12 @@ function Login() {
 			text="Еще не зарегистрированы?"
 			linkText="Регистрация"
 			path="/signup"
-			size="form__submit-button-max-size"
+			size="form__error-max-space"
 			handleSubmit={handleSubmit}
 			reset={reset}
 			isValid={isValid}
+			handleSubmitForm={props.handleSubmitForm}
+			isMessage={props.isMessage}
 		>
 			<Input type="email" name="email" label="E-mail" register={register} errors={errors?.email} />
 

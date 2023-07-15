@@ -3,7 +3,7 @@ import Input from '../Input/Input';
 import Form from '../Form/Form';
 import { useForm } from 'react-hook-form';
 
-function Register() {
+function Register(props) {
 	const {
 		register,
 		formState: { errors, isValid },
@@ -20,10 +20,12 @@ function Register() {
 			text="Уже зарегистрированы?"
 			linkText="Войти"
 			path="/signin"
-			size="form__submit-button-min-size"
+			size="form__error-min-space"
 			handleSubmit={handleSubmit}
 			reset={reset}
 			isValid={isValid}
+			handleSubmitForm={props.handleSubmitForm}
+			isMessage={props.isMessage}
 		>
 			<Input type="text" name="name" label="Имя" register={register} errors={errors?.name} />
 

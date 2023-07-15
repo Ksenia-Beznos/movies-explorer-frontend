@@ -30,7 +30,7 @@ function SearchForm() {
 				placeholder="Фильм"
 				autoComplete="off"
 				{...register('movieInput', {
-					required: 'Введите название фильма',
+					required: 'Введите ключевое слово',
 					pattern: {
 						value: /^[^\s]/,
 						message: 'Название фильма не может начинаться с пробела',

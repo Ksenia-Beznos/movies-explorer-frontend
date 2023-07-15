@@ -3,8 +3,9 @@ import { Route, Routes, NavLink } from 'react-router-dom';
 import './Header.css';
 import logo from '../../images/logo.svg';
 import Navigation from '../Navigation/Navigation';
+import BurgerMenu from '../BurgerMenu/BurgerMenu';
 
-function Header({ color }) {
+function Header({ color, loggedIn }) {
 	return (
 		<header className={`header ${color}`}>
 			<div className="header__container">
@@ -16,22 +17,26 @@ function Header({ color }) {
 					<Routes>
 						<Route
 							path="/"
-							element={[
-								<div className="header__links">
-									<NavLink to="/signup" className="header__link-register">
-										Регистрация
-									</NavLink>
-									<NavLink to="/signin">
-										<button className="header__link-button" type="button" aria-label="Войти">
-											Войти
-										</button>
-									</NavLink>
-								</div>,
-							]}
+							element={
+								loggedIn ? (
+									[<Navigation />, <BurgerMenu />]
+								) : (
+									<div className="header__links">
+										<NavLink to="/signup" className="header__link-register">
+											Регистрация
+										</NavLink>
+										<NavLink to="/signin">
+											<button className="header__link-button" type="button" aria-label="Войти">
+												Войти
+											</button>
+										</NavLink>
+									</div>
+								)
+							}
 						/>
-						<Route path="/movies" element={<Navigation />} />
-						<Route path="/saved-movies" element={<Navigation />} />
-						<Route path="/profile" element={<Navigation />} />
+						<Route path="/movies" element={[<Navigation />, <BurgerMenu />]} />
+						<Route path="/saved-movies" element={[<Navigation />, <BurgerMenu />]} />
+						<Route path="/profile" element={[<Navigation />, <BurgerMenu />]} />
 					</Routes>
 				</div>
 			</div>

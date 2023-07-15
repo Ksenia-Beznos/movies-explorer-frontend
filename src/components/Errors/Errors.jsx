@@ -24,11 +24,11 @@ export const errorPass = {
 	type: String,
 	required: 'Обязательное поле',
 	minLength: {
-		value: 6,
-		message: 'Минимальное кол-во символов: 6',
+		value: 8,
+		message: 'Минимальное кол-во символов: 8',
 	},
-	pattern: {
-		value: /^\S*$/,
-		message: 'Поле не должно содержать пробелов',
-	},
+	// pattern: {
+	// 	value: /^\S*$/,
+	// 	message: 'Поле не должно содержать пробелов',
+	// },
 };
