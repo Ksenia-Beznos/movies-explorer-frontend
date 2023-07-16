@@ -2,7 +2,7 @@ import React from 'react';
 import './MoviesCard.css';
 
 function MoviesCard(props) {
-	// console.log(props)
+	
 	return (
 		<div className="element__item">
 			<img

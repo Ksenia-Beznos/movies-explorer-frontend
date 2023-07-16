@@ -1,24 +1,33 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './SearchForm.css';
 import find from '../../images/find.svg';
 import FilterCheckbox from '../FilterCheckbox/FilterCheckbox';
 import line from '../../images/line.svg';
 import { useForm } from 'react-hook-form';
 
-function SearchForm() {
+function SearchForm(props) {
 	const {
 		register,
 		formState: { errors, isValid },
 		handleSubmit,
-		reset,
+		setValue,
+		watch,
 	} = useForm({
 		mode: 'onChange',
 	});
 
 	const onSubmit = (data) => {
-		console.log({ data });
-		reset();
+		props.handleSearch(data.movieInput);
 	};
+
+	const query = watch('movieInput', '');
+
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			props.handleSearch(query);
+		}, 500);
+		return () => clearTimeout(timer);
+	}, [query, props.handleSearch]);
 
 	return (
 		<form className="search-form" onSubmit={handleSubmit(onSubmit)}>
@@ -51,7 +60,7 @@ function SearchForm() {
 				<img src={find} alt="Кнопка в виде синей стрелки" />
 			</button>
 			<img className="search-form__line" src={line} alt="вертикальная линия" />
-			<FilterCheckbox />
+			<FilterCheckbox toggleShortMovies={props.toggleShortMovies} short={props.short}/>
 		</form>
 	);
 }
