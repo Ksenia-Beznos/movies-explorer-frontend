@@ -1,6 +1,7 @@
 .navigation {
 	display: flex;
 	align-items: center;
+	width: 100%;
 }
 
 .navigation__link-active {
@@ -14,7 +15,7 @@
 .navigation__movies {
 	display: flex;
 	gap: 16px;
-	margin: 0 364px 0 426px;
+	margin: 0 auto;
 }
 
 .navigation__movies-link {
@@ -54,8 +55,9 @@
 }
 
 @media screen and (max-width: 1279px) {
-	.navigation__movies {
-		margin: 0 100px;
+	.navigation {
+		display: flex;
+		justify-content: space-between;
 	}
 }
 
