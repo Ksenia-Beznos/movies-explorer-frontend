@@ -32,6 +32,16 @@ export function login({ email, password }) {
 	}).then(getResponse);
 }
 
+export function loginWithToken() {
+	return fetch(`${BASE_URL}/users/me`, {
+		method: 'GET',
+		credentials: 'include',
+		headers: {
+			'Content-Type': 'application/json',
+		},
+	}).then(getResponse);
+}
+
 export function logout() {
 	return fetch(`${BASE_URL}/signout`, {
 		credentials: 'include',
@@ -54,12 +64,26 @@ export function edit({ name, email }) {
 	}).then(getResponse);
 }
 
-export function loginWithToken() {
-	return fetch(`${BASE_URL}/users/me`, {
-		method: 'GET',
+export function savedMovie(element) {
+	return fetch(`${BASE_URL}/movies`, {
+		method: 'POST',
 		credentials: 'include',
 		headers: {
+			Accept: 'application/json',
 			'Content-Type': 'application/json',
 		},
+		body: JSON.stringify({
+			country: element.country,
+			director: element.director,
+			duration: element.duration,
+			thumbnail: 'https://api.nomoreparties.co/' + element.image.formats.thumbnail.url,
+			year: element.year,
+			description: element.description,
+			image: 'https://api.nomoreparties.co/' + element.image.url,
+			trailerLink: element.trailerLink,
+			movieId: element.id,
+			nameRU: element.nameRU,
+			nameEN: element.nameEN,
+		}),
 	}).then(getResponse);
 }

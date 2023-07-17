@@ -27,8 +27,8 @@ export const errorPass = {
 		value: 8,
 		message: 'Минимальное кол-во символов: 8',
 	},
-	// pattern: {
-	// 	value: /^\S*$/,
-	// 	message: 'Поле не должно содержать пробелов',
-	// },
+	pattern: {
+		value: /^\S*$/,
+		message: 'Поле не должно содержать пробелов',
+	},
 };
