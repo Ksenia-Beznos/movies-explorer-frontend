@@ -63,6 +63,10 @@
 	font-weight: 500;
 	color: #ee3465;
 	line-height: 1.21;
+	outline: none;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
 }
 
 .profile-page__links {
