@@ -41,7 +41,7 @@
 }
 
 .search-form__button_disabled {
-	opacity: .5;
+	opacity: 0.5;
 	cursor: default;
 	border: none;
 	background-color: transparent;
@@ -96,7 +96,8 @@
 		margin: 77px auto 109px;
 	}
 
-	.search-form__button {
+	.search-form__button,
+	.search-form__button_disabled {
 		top: 95px;
 		right: 227px;
 	}
@@ -126,7 +127,8 @@
 		display: none;
 	}
 
-	.search-form__button {
+	.search-form__button,
+	.search-form__button_disabled {
 		top: 96px;
 		right: 30px;
 	}
