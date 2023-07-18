@@ -87,3 +87,24 @@ export function savedMovie(element) {
 		}),
 	}).then(getResponse);
 }
+
+export function getSavedMovies() {
+	return fetch(`${BASE_URL}/movies`, {
+		credentials: 'include',
+		headers: {
+			Accept: 'application/json',
+			'Content-Type': 'application/json',
+		},
+	}).then(getResponse);
+}
+
+export function removeMovies(movieId) {
+	return fetch(`${BASE_URL}/movies/${movieId}`, {
+		method: 'DELETE',
+		credentials: 'include',
+		headers: {
+			Accept: 'application/json',
+			'Content-Type': 'application/json',
+		},
+	}).then(getResponse);
+}

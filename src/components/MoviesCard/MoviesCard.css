@@ -59,6 +59,16 @@
 	cursor: pointer;
 }
 
+.element__like-active-button {
+	background: url(../../images/like-active.svg) no-repeat;
+	outline: none;
+	border: none;
+	padding: 0;
+	width: 14px;
+	height: 14px;
+	cursor: pointer;
+}
+
 .element__delete-button {
 	background: url(../../images/delete.svg) transparent no-repeat center;
 	outline: none;

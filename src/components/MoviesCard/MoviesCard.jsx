@@ -2,11 +2,24 @@ import React from 'react';
 import './MoviesCard.css';
 
 function MoviesCard(props) {
+	function save() {
+		props.savedMovie(props.movie);
+	}
+
+	function remove() {
+		props.removeMovie(props.movie);
+	}
+
+	// console.log(props.movie)
 	return (
 		<div className="element__item">
 			<img
 				className="element__image"
-				src={`https://api.nomoreparties.co/${props.movie.image.url}`}
+				src={
+					props.icon !== 'delete'
+						? `https://api.nomoreparties.co/${props.movie.image.url}`
+						: props.movie.image
+				}
 				alt={props.movie.nameRU}
 			/>
 			<div className="element__description-group">
@@ -14,7 +27,7 @@ function MoviesCard(props) {
 				<button
 					className={`element__${props.icon}-button`}
 					type="button"
-					onClick={() => props.savedMovies(props.movie)}
+					onClick={props.icon === 'like' ? save : remove}
 				/>
 			</div>
 			<p className="element__duration">{props.movie.duration}</p>

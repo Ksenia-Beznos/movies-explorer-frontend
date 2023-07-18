@@ -16,6 +16,7 @@ import Edit from '../Edit/Edit';
 import { register, login, edit, loginWithToken, logout } from '../../utils/MainApi';
 import { CurrentUserContext } from '../../contexts/CurrentUserContext';
 import { getMovies } from '../../utils/MoviesApi';
+import { savedMovie, getSavedMovies, removeMovies } from '../../utils/MainApi';
 
 function App() {
 	const location = useLocation();
@@ -36,14 +37,46 @@ function App() {
 	const [loggedIn, setLoggedIn] = useState(false);
 
 	const [movies, setMovies] = useState([]);
+	const [savedMovies, setSavedMovies] = useState([]);
 
 	// загружаем все фильмы
 	useEffect(() => {
 		if (loggedIn) {
-			Promise.all([getMovies()])
+			Promise.all([getMovies(), getSavedMovies()])
 				.then((res) => {
 					if (res) {
-						setMovies(res[0]);
+						const movies = res[0];
+						const savedMovies = res[1];
+						const moviesUpdate = movies.map((element) => {
+							const movieSaved = savedMovies.find((elementSave) => {
+								return elementSave.movieId === element.id;
+							});
+
+							if (movieSaved) {
+								return {
+									...element,
+									icon: 'like-active',
+									key: element.id,
+								};
+							}
+
+							return {
+								...element,
+								icon: 'like',
+								key: element.id,
+							};
+						});
+
+						const savedMoviesUpdate = savedMovies.map((element) => {
+							return {
+								...element,
+								icon: 'delete',
+								key: element._id,
+							};
+						});
+
+						setMovies(moviesUpdate);
+						setSavedMovies(savedMoviesUpdate);
 					}
 				})
 				.catch((err) => {
@@ -127,6 +160,63 @@ function App() {
 			});
 	}
 
+	// сохранение фильмов
+	function handleSavedMovies(element) {
+		savedMovie(element)
+			.then((res) => {
+				if (res) {
+					setMovies((state) => {
+						return state.map((element) =>
+							element.id === res.movieId
+								? { ...element, icon: 'like-active', key: element.id }
+								: element
+						);
+					});
+
+					res.icon = 'delete';
+					setSavedMovies((state) => [...state, res]);
+				}
+			})
+			.catch((err) => {
+				console.log(err);
+			});
+	}
+
+	function handleRemoveMovie(movie) {
+		if (movie._id) {
+			removeMovies(movie._id)
+				.then(() => {
+					setSavedMovies((state) => state.filter((element) => element._id !== movie._id));
+					setMovies((state) =>
+						state.map((element) =>
+							element.id === movie.movieId ? { ...element, icon: 'like', key: element.id } : element
+						)
+					);
+				})
+				.catch((err) => {
+					console.log(err);
+				});
+		} else {
+			const savedMovie = savedMovies.find((element) => element.movieId === movie.id);
+			if (savedMovie) {
+				removeMovies(savedMovie._id)
+					.then(() => {
+						setMovies((state) =>
+							state.map((element) =>
+								element.id === movie.id ? { ...element, icon: 'like', key: element.id } : element
+							)
+						);
+						setSavedMovies((state) =>
+							state.filter((element) => element.movieId !== savedMovie.movieId)
+						);
+					})
+					.catch((err) => {
+						console.log(err);
+					});
+			}
+		}
+	}
+
 	return (
 		<div className="app">
 			<CurrentUserContext.Provider value={currentUser}>
@@ -136,11 +226,26 @@ function App() {
 					<Route path="/" element={<Main />} />
 					<Route
 						path="/movies"
-						element={<ProtectedRoute loggedIn={loggedIn} element={Movies} movies={movies} />}
+						element={
+							<ProtectedRoute
+								loggedIn={loggedIn}
+								element={Movies}
+								movies={movies}
+								handleSavedMovies={handleSavedMovies}
+								handleRemoveMovie={handleRemoveMovie}
+							/>
+						}
 					/>
 					<Route
 						path="/saved-movies"
-						element={<ProtectedRoute loggedIn={loggedIn} element={SavedMovies} />}
+						element={
+							<ProtectedRoute
+								loggedIn={loggedIn}
+								element={SavedMovies}
+								savedMovies={savedMovies}
+								handleRemoveMovie={handleRemoveMovie}
+							/>
+						}
 					/>
 					<Route
 						path="/profile"

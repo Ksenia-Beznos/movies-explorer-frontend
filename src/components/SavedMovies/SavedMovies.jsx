@@ -1,21 +1,51 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './SavedMovies.css';
 import MoviesSavedCardList from '../MoviesSavedCardList/MoviesSavedCardList';
 import SearchForm from '../SearchForm/SearchForm';
+import MoviesCard from '../MoviesCard/MoviesCard';
+import { searchMovies } from '../../utils/SearchMovies';
+import { HandleResizeWindow } from '../../utils/Resize';
 
-function SavedMovies() {
-	const [countCards, setCountCards] = React.useState(2);
+function SavedMovies(props) {
+	const [query, setQuery] = useState('');
+	const [short, setShort] = useState(false);
+	const [quantity, setQuantity] = useState(0);
 
-	function addCards() {
-		setCountCards(countCards + 4);
+	const movies = searchMovies(props.savedMovies, query, short, quantity);
+	const quantityMovies = HandleResizeWindow();
+
+	useEffect(() => {
+		setQuantity(quantityMovies.quantity);
+	}, [quantityMovies]);
+
+	const cardMovies = movies.map((element) => {
+		return (
+			<MoviesCard
+				movie={element}
+				icon={element.icon}
+				removeMovie={props.handleRemoveMovie}
+				key={element._id}
+			/>
+		);
+	});
+	function handleSearch(query) {
+		setQuery(query);
+	}
+
+	function toggleShortMovies(checked) {
+		setShort(checked);
+	}
+
+	function addQuantityMovies() {
+		setQuantity(quantity + quantityMovies.quantityElse);
 	}
 
 	return (
 		<>
-			<SearchForm />
+			<SearchForm handleSearch={handleSearch} toggleShortMovies={toggleShortMovies} short={short} />
 			<section className="movies-saved">
-				<MoviesSavedCardList count={countCards} />
-				<button className="movies__button movies__button-saved" onClick={addCards} type="button">
+				<MoviesSavedCardList cardMovies={cardMovies} />
+				<button className="movies__button movies__button-saved" type="button">
 					Ещё
 				</button>
 			</section>
