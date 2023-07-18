@@ -104,7 +104,7 @@ function App() {
 		register({ name, email, password })
 			.then((res) => {
 				if (res) {
-					navigate('/movies', { replace: true });
+					handleSubmitLogin({ email, password });
 				}
 			})
 			.catch((err) => {
