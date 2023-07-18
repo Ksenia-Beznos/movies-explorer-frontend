@@ -4,6 +4,7 @@ import find from '../../images/find.svg';
 import FilterCheckbox from '../FilterCheckbox/FilterCheckbox';
 import line from '../../images/line.svg';
 import { useForm } from 'react-hook-form';
+import { useLocation } from 'react-router-dom';
 
 function SearchForm(props) {
 	const {
@@ -19,7 +20,7 @@ function SearchForm(props) {
 	const onSubmit = (data) => {
 		props.handleSearch(data.movieInput);
 	};
-
+	const location = useLocation();
 	const query = watch('movieInput', '');
 
 	useEffect(() => {
@@ -28,6 +29,22 @@ function SearchForm(props) {
 		}, 500);
 		return () => clearTimeout(timer);
 	}, [query, props.handleSearch]);
+
+	useEffect(() => {
+		if (location.pathname === '/movies') {
+			const querySaved = sessionStorage.getItem('moviesquery');
+
+			if (querySaved) {
+				setValue('movieInput', querySaved);
+			}
+		} else {
+			const querySaved = sessionStorage.getItem('savedmoviesquery');
+
+			if (querySaved) {
+				setValue('movieInput', querySaved);
+			}
+		}
+	}, []);
 
 	return (
 		<form className="search-form" onSubmit={handleSubmit(onSubmit)}>
@@ -60,7 +77,7 @@ function SearchForm(props) {
 				<img src={find} alt="Кнопка в виде синей стрелки" />
 			</button>
 			<img className="search-form__line" src={line} alt="вертикальная линия" />
-			<FilterCheckbox toggleShortMovies={props.toggleShortMovies} short={props.short}/>
+			<FilterCheckbox toggleShortMovies={props.toggleShortMovies} short={props.short} />
 		</form>
 	);
 }

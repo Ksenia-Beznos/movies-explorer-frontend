@@ -10,18 +10,26 @@ function MoviesCard(props) {
 		props.removeMovie(props.movie);
 	}
 
-	// console.log(props.movie)
+	function duration(time) {
+		const num = parseInt(time);
+		const hour = Math.floor(num / 60);
+		const min = num % 60;
+		return `${hour}ч ${min}м`;
+	}
+
 	return (
 		<div className="element__item">
-			<img
-				className="element__image"
-				src={
-					props.icon !== 'delete'
-						? `https://api.nomoreparties.co/${props.movie.image.url}`
-						: props.movie.image
-				}
-				alt={props.movie.nameRU}
-			/>
+			<a className='element__preview' href={props.movie.trailerLink} target='_blank'>
+				<img
+					className="element__image"
+					src={
+						props.icon !== 'delete'
+							? `https://api.nomoreparties.co/${props.movie.image.url}`
+							: props.movie.image
+					}
+					alt={props.movie.nameRU}
+				/>
+			</a>
 			<div className="element__description-group">
 				<h3 className="element__title">{props.movie.nameRU}</h3>
 				<button
@@ -30,7 +38,7 @@ function MoviesCard(props) {
 					onClick={props.icon === 'like' ? save : remove}
 				/>
 			</div>
-			<p className="element__duration">{props.movie.duration}</p>
+			<p className="element__duration">{duration(props.movie.duration)}</p>
 		</div>
 	);
 }

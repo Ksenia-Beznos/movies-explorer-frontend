@@ -1,17 +1,23 @@
 import React from 'react';
 import './PageNotFound.css';
-import { NavLink } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function PageNotFound() {
+	const navigate = useNavigate();
+
+	function goBack() {
+		navigate(-1);
+	}
+
 	return (
 		<section className="page-404">
 			<div className="page-404__container">
 				<h1 className="page-404__title">404</h1>
 				<p className="page-404__subtitle">Страница не найдена</p>
 
-				<NavLink to="/" className="page-404__link">
+				<button className="page-404__link" onClick={goBack}>
 					Назад
-				</NavLink>
+				</button>
 			</div>
 		</section>
 	);

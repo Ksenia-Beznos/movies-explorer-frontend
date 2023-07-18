@@ -49,7 +49,7 @@
 }
 
 .element__like-button {
-	background: url(../../images/like.svg) transparent no-repeat;
+	background: url(../../images/like.svg) no-repeat center;
 	outline: none;
 	border: none;
 	padding: 0;
@@ -60,12 +60,13 @@
 }
 
 .element__like-active-button {
-	background: url(../../images/like-active.svg) no-repeat;
+	background: url(../../images/like-active.svg) no-repeat center;
 	outline: none;
 	border: none;
 	padding: 0;
 	width: 14px;
 	height: 14px;
+	color: #424242;
 	cursor: pointer;
 }
 

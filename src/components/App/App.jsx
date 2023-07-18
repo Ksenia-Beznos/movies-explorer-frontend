@@ -161,7 +161,6 @@ function App() {
 				if (res) {
 					setLoggedIn(true);
 					setCurrentUser(res);
-					navigate('/movies', { replace: true });
 				}
 			})
 			.catch((e) => console.log(e))
@@ -178,6 +177,7 @@ function App() {
 			.then((res) => {
 				if (res !== false) {
 					navigate('/profile', { replace: true });
+					setCurrentUser(res);
 				}
 			})
 			.catch((err) => {

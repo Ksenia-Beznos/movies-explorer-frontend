@@ -8,7 +8,10 @@ import { HandleResizeWindow } from '../../utils/Resize';
 
 function Movies(props) {
 	const [query, setQuery] = useState('');
-	const [short, setShort] = useState(false);
+	const [short, setShort] = useState(() => {
+		const savedShort = sessionStorage.getItem('moviesshort');
+		return savedShort ? JSON.parse(savedShort) : false;
+	});
 	const [quantity, setQuantity] = useState(0);
 
 	const movies = searchMovies(props.movies, query, short, quantity);
@@ -18,6 +21,14 @@ function Movies(props) {
 	useEffect(() => {
 		setQuantity(quantityMovies.quantity);
 	}, [quantityMovies]);
+
+	useEffect(() => {
+		sessionStorage.setItem('moviesquery', query);
+	}, [query]);
+
+	useEffect(() => {
+		sessionStorage.setItem('moviesshort', JSON.stringify(short));
+	}, [short]);
 
 	const cardMovies = movies.map((element) => {
 		return (
