@@ -17,6 +17,7 @@ import { register, login, edit, loginWithToken, logout } from '../../utils/MainA
 import { CurrentUserContext } from '../../contexts/CurrentUserContext';
 import { getMovies } from '../../utils/MoviesApi';
 import { savedMovie, getSavedMovies, removeMovies } from '../../utils/MainApi';
+import Preloader from '../Preloader/Preloader';
 
 function App() {
 	const location = useLocation();
@@ -39,8 +40,12 @@ function App() {
 	const [movies, setMovies] = useState([]);
 	const [savedMovies, setSavedMovies] = useState([]);
 
+	const [isPreloader, setIsPreloader] = useState(true);
+	const [checkedToken, setCheckedToken] = useState(false);
+
 	// загружаем все фильмы
 	useEffect(() => {
+		setIsPreloader(true);
 		if (loggedIn) {
 			Promise.all([getMovies(), getSavedMovies()])
 				.then((res) => {
@@ -81,6 +86,9 @@ function App() {
 				})
 				.catch((err) => {
 					console.log(err);
+				})
+				.finally(() => {
+					setIsPreloader(false);
 				});
 		}
 	}, [loggedIn]);
@@ -92,6 +100,7 @@ function App() {
 
 	//регистрация
 	function handleSubmitRegister({ name, email, password }) {
+		setIsPreloader(true);
 		register({ name, email, password })
 			.then((res) => {
 				if (res) {
@@ -101,11 +110,15 @@ function App() {
 			.catch((err) => {
 				console.log(err);
 				setIsMessage(err.message);
+			})
+			.finally(() => {
+				setIsPreloader(false);
 			});
 	}
 
 	// логирование
 	function handleSubmitLogin({ email, password }) {
+		setIsPreloader(true);
 		login({ email, password })
 			.then((res) => {
 				if (res) {
@@ -116,11 +129,15 @@ function App() {
 			.catch((err) => {
 				console.log(err);
 				setIsMessage(err.message);
+			})
+			.finally(() => {
+				setIsPreloader(false);
 			});
 	}
 
 	// разлогирование
 	function handleSubmitLogout() {
+		setIsPreloader(true);
 		logout()
 			.then((res) => {
 				if (res) {
@@ -131,10 +148,14 @@ function App() {
 			.catch((err) => {
 				console.log(err);
 				setIsMessage(err.message);
+			})
+			.finally(() => {
+				setIsPreloader(false);
 			});
 	}
 
 	useEffect(() => {
+		setIsPreloader(true);
 		loginWithToken()
 			.then((res) => {
 				if (res) {
@@ -143,11 +164,16 @@ function App() {
 					navigate('/movies', { replace: true });
 				}
 			})
-			.catch((e) => console.log(e));
+			.catch((e) => console.log(e))
+			.finally(() => {
+				setIsPreloader(false);
+				setCheckedToken(true);
+			});
 	}, []);
 
 	// редактирвание
 	function handleSubmitEdit({ name, email }) {
+		setIsPreloader(true);
 		edit({ name, email })
 			.then((res) => {
 				if (res !== false) {
@@ -157,11 +183,15 @@ function App() {
 			.catch((err) => {
 				console.log(err);
 				setIsMessage(err.message);
+			})
+			.finally(() => {
+				setIsPreloader(false);
 			});
 	}
 
 	// сохранение фильмов
 	function handleSavedMovies(element) {
+		setIsPreloader(true);
 		savedMovie(element)
 			.then((res) => {
 				if (res) {
@@ -179,10 +209,14 @@ function App() {
 			})
 			.catch((err) => {
 				console.log(err);
+			})
+			.finally(() => {
+				setIsPreloader(false);
 			});
 	}
 
 	function handleRemoveMovie(movie) {
+		setIsPreloader(true);
 		if (movie._id) {
 			removeMovies(movie._id)
 				.then(() => {
@@ -195,8 +229,12 @@ function App() {
 				})
 				.catch((err) => {
 					console.log(err);
+				})
+				.finally(() => {
+					setIsPreloader(false);
 				});
 		} else {
+			setIsPreloader(true);
 			const savedMovie = savedMovies.find((element) => element.movieId === movie.id);
 			if (savedMovie) {
 				removeMovies(savedMovie._id)
@@ -212,6 +250,9 @@ function App() {
 					})
 					.catch((err) => {
 						console.log(err);
+					})
+					.finally(() => {
+						setIsPreloader(false);
 					});
 			}
 		}
@@ -219,56 +260,60 @@ function App() {
 
 	return (
 		<div className="app">
-			<CurrentUserContext.Provider value={currentUser}>
-				{headerVisible && <Header />}
-				{headerVisibleHomePage && <Header color={'header__color'} loggedIn={loggedIn} />}
-				<Routes>
-					<Route path="/" element={<Main />} />
-					<Route
-						path="/movies"
-						element={
-							<ProtectedRoute
-								loggedIn={loggedIn}
-								element={Movies}
-								movies={movies}
-								handleSavedMovies={handleSavedMovies}
-								handleRemoveMovie={handleRemoveMovie}
-							/>
-						}
-					/>
-					<Route
-						path="/saved-movies"
-						element={
-							<ProtectedRoute
-								loggedIn={loggedIn}
-								element={SavedMovies}
-								savedMovies={savedMovies}
-								handleRemoveMovie={handleRemoveMovie}
-							/>
-						}
-					/>
-					<Route
-						path="/profile"
-						element={
-							<ProtectedRoute loggedIn={loggedIn} element={Profile} logout={handleSubmitLogout} />
-						}
-					/>
-					<Route
-						path="/signin"
-						element={<Login handleSubmitForm={handleSubmitLogin} isMessage={isMessage} />}
-					/>
-					<Route
-						path="/signup"
-						element={<Register handleSubmitForm={handleSubmitRegister} isMessage={isMessage} />}
-					/>
-					<Route
-						path="/edit"
-						element={<Edit handleSubmitForm={handleSubmitEdit} isMessage={isMessage} />}
-					/>
-					<Route path="*" element={<PageNotFound />} />
-				</Routes>
-				{footerVisible && <Footer />}
-			</CurrentUserContext.Provider>
+			{checkedToken ? (
+				<CurrentUserContext.Provider value={currentUser}>
+					{headerVisible && <Header />}
+					{headerVisibleHomePage && <Header color={'header__color'} loggedIn={loggedIn} />}
+					<Routes>
+						<Route path="/" element={<Main />} />
+						<Route
+							path="/movies"
+							element={
+								<ProtectedRoute
+									loggedIn={loggedIn}
+									element={Movies}
+									movies={movies}
+									handleSavedMovies={handleSavedMovies}
+									handleRemoveMovie={handleRemoveMovie}
+								/>
+							}
+						/>
+						<Route
+							path="/saved-movies"
+							element={
+								<ProtectedRoute
+									loggedIn={loggedIn}
+									element={SavedMovies}
+									savedMovies={savedMovies}
+									handleRemoveMovie={handleRemoveMovie}
+								/>
+							}
+						/>
+						<Route
+							path="/profile"
+							element={
+								<ProtectedRoute loggedIn={loggedIn} element={Profile} logout={handleSubmitLogout} />
+							}
+						/>
+						<Route
+							path="/signin"
+							element={<Login handleSubmitForm={handleSubmitLogin} isMessage={isMessage} />}
+						/>
+						<Route
+							path="/signup"
+							element={<Register handleSubmitForm={handleSubmitRegister} isMessage={isMessage} />}
+						/>
+						<Route
+							path="/edit"
+							element={<Edit handleSubmitForm={handleSubmitEdit} isMessage={isMessage} />}
+						/>
+						<Route path="*" element={<PageNotFound />} />
+					</Routes>
+					{footerVisible && <Footer />}
+				</CurrentUserContext.Provider>
+			) : (
+				<Preloader isPreloader={isPreloader} />
+			)}
 		</div>
 	);
 }
