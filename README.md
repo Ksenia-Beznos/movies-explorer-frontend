@@ -4,3 +4,6 @@ https://disk.yandex.ru/d/8zXuYTolK6rCWw
 
 Ссылка на PR:
 https://github.com/Ksenia-Beznos/movies-explorer-frontend/pull/3
+
+Ссылка на сайт:
+https://portfolio-diploma.nomoredomains.rocks
