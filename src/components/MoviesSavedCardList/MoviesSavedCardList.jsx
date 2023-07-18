@@ -3,7 +3,10 @@ import './MoviesSavedCardList.css';
 import MoviesCard from '../MoviesCard/MoviesCard';
 
 function MoviesSavedCardList(props) {
-	return <ul className="movies__list">{props.cardMovies}</ul>;
+	return props.cardMovies.length > 0 ? (
+		<ul className="movies__list">{props.cardMovies}</ul>
+	) : (
+		<p className="movies__message">Ничего не найдено</p>
+	);
 }
-
 export default MoviesSavedCardList;

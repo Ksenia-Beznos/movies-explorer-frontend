@@ -56,9 +56,18 @@ function SavedMovies(props) {
 			<SearchForm handleSearch={handleSearch} toggleShortMovies={toggleShortMovies} short={short} />
 			<section className="movies-saved">
 				<MoviesSavedCardList cardMovies={cardMovies} />
-				<button className="movies__button movies__button-saved" type="button">
-					Ещё
-				</button>
+
+				{movies.length >= quantity ? (
+					<button
+						className="movies__button movies__button-saved"
+						type="button"
+						onClick={addQuantityMovies}
+					>
+						Ещё
+					</button>
+				) : (
+					''
+				)}
 			</section>
 		</>
 	);

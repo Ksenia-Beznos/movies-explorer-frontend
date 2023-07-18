@@ -60,9 +60,13 @@ function Movies(props) {
 			<section className="movies">
 				<MoviesCardList cardMovies={cardMovies} />
 
-				<button className="movies__button" type="button" onClick={addQuantityMovies}>
-					Ещё
-				</button>
+				{movies.length >= quantity ? (
+					<button className="movies__button" type="button" onClick={addQuantityMovies}>
+						Ещё
+					</button>
+				) : (
+					''
+				)}
 			</section>
 		</>
 	);
