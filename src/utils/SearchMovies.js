@@ -3,7 +3,6 @@ import { HandleResizeWindow } from './Resize';
 export function searchMovies(movies, query, short, quantity) {
 	const defaultQuantity = HandleResizeWindow();
 
-
 	if (!movies) {
 		return [];
 	}
@@ -20,7 +19,8 @@ export function searchMovies(movies, query, short, quantity) {
 		filterMovies = filterMovies.filter((movie) => movie.duration <= 40);
 	}
 
+	let maxMovies = filterMovies.length;
 	filterMovies = filterMovies.slice(0, quantity ? quantity : defaultQuantity.quantity);
 
-	return filterMovies;
+	return { movies: filterMovies, maxMovies };
 }

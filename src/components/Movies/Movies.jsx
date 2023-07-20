@@ -14,7 +14,7 @@ function Movies(props) {
 	});
 	const [quantity, setQuantity] = useState(0);
 
-	const movies = searchMovies(props.movies, query, short, quantity);
+	const { movies, maxMovies } = searchMovies(props.movies, query, short, quantity);
 
 	const quantityMovies = HandleResizeWindow();
 
@@ -59,8 +59,7 @@ function Movies(props) {
 			<SearchForm handleSearch={handleSearch} toggleShortMovies={toggleShortMovies} short={short} />
 			<section className="movies">
 				<MoviesCardList cardMovies={cardMovies} />
-
-				{movies.length >= quantity ? (
+				{maxMovies > quantity ? (
 					<button className="movies__button" type="button" onClick={addQuantityMovies}>
 						Ещё
 					</button>

@@ -69,6 +69,13 @@
 	cursor: pointer;
 }
 
+.profile-page__message {
+	color: #3ddc84;
+	font-size: 18px;
+	font-weight: 500;
+	margin: 0 auto;
+}
+
 .profile-page__links {
 	display: flex;
 	flex-direction: column;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Input from '../Input/Input';
 import Form from '../Form/Form';
 import { useForm } from 'react-hook-form';
@@ -9,9 +9,22 @@ function Login(props) {
 		formState: { errors, isValid },
 		handleSubmit,
 		reset,
+		watch,
 	} = useForm({
 		mode: 'onChange',
 	});
+	const [isChangeForm, setIsChangeForm] = useState(false);
+
+	const isValidEmail = (email) => {
+		const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9-]+\.[A-Z]{2,4}$/i;
+		return emailRegex.test(email);
+	};
+
+	useEffect(() => {
+		const emailIsValid = isValidEmail(watch('email'));
+
+		setIsChangeForm(emailIsValid);
+	}, [watch('email')]);
 
 	return (
 		<Form
@@ -23,7 +36,7 @@ function Login(props) {
 			size="form__error-max-space"
 			handleSubmit={handleSubmit}
 			reset={reset}
-			isValid={isValid}
+			isValid={isValid && isChangeForm}
 			handleSubmitForm={props.handleSubmitForm}
 			isMessage={props.isMessage}
 		>

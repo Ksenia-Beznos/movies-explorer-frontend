@@ -17,6 +17,7 @@ function Profile(props) {
 				<p className="profile-page__placeholder profile-page__placeholder-font">E-mail</p>
 				<p className="profile-page__text profile-page__text-font">{currentUser.email}</p>
 			</div>
+			<p className='profile-page__message'>{props.isSuccessMessage}</p>
 			<div className="profile-page__links">
 				<NavLink to="/edit" className="profile-page__link profile-page__edit">
 					Редактировать

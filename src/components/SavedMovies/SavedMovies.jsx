@@ -14,7 +14,7 @@ function SavedMovies(props) {
 		return savedShort ? JSON.parse(savedShort) : false;
 	});
 
-	const movies = searchMovies(props.savedMovies, query, short, quantity);
+	const { movies, maxMovies } = searchMovies(props.savedMovies, query, short, quantity);
 	const quantityMovies = HandleResizeWindow();
 
 	useEffect(() => {
@@ -57,7 +57,7 @@ function SavedMovies(props) {
 			<section className="movies-saved">
 				<MoviesSavedCardList cardMovies={cardMovies} />
 
-				{movies.length >= quantity ? (
+				{maxMovies > quantity ? (
 					<button
 						className="movies__button movies__button-saved"
 						type="button"

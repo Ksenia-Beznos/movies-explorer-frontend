@@ -2,7 +2,7 @@ import './App.css';
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
-import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
+import { ProtectedRoute, ProtectedLoginRoute } from '../ProtectedRoute/ProtectedRoute';
 import Header from '../Header/Header';
 import Main from '../Main/Main';
 import Movies from '../Movies/Movies';
@@ -42,6 +42,18 @@ function App() {
 
 	const [isPreloader, setIsPreloader] = useState(true);
 	const [checkedToken, setCheckedToken] = useState(false);
+
+	const [isSuccessMessage, setIsSuccessMessage] = useState('');
+
+	useEffect(() => {
+		if (location.pathname !== '/profile') {
+			setIsSuccessMessage('');
+		} else {
+			setTimeout(() => {
+				setIsSuccessMessage('');
+			}, 4000);
+		}
+	}, [navigate]);
 
 	// загружаем все фильмы
 	useEffect(() => {
@@ -141,6 +153,7 @@ function App() {
 		logout()
 			.then((res) => {
 				if (res) {
+					sessionStorage.clear();
 					setLoggedIn(false);
 					navigate('/', { replace: true });
 				}
@@ -178,6 +191,7 @@ function App() {
 				if (res !== false) {
 					navigate('/profile', { replace: true });
 					setCurrentUser(res);
+					setIsSuccessMessage('Пользователь успешно обновлен');
 				}
 			})
 			.catch((err) => {
@@ -292,20 +306,46 @@ function App() {
 						<Route
 							path="/profile"
 							element={
-								<ProtectedRoute loggedIn={loggedIn} element={Profile} logout={handleSubmitLogout} />
+								<ProtectedRoute
+									loggedIn={loggedIn}
+									element={Profile}
+									logout={handleSubmitLogout}
+									isSuccessMessage={isSuccessMessage}
+								/>
 							}
 						/>
 						<Route
 							path="/signin"
-							element={<Login handleSubmitForm={handleSubmitLogin} isMessage={isMessage} />}
+							element={
+								<ProtectedLoginRoute
+									loggedIn={loggedIn}
+									element={Login}
+									handleSubmitForm={handleSubmitLogin}
+									isMessage={isMessage}
+								/>
+							}
 						/>
 						<Route
 							path="/signup"
-							element={<Register handleSubmitForm={handleSubmitRegister} isMessage={isMessage} />}
+							element={
+								<ProtectedLoginRoute
+									loggedIn={loggedIn}
+									element={Register}
+									handleSubmitForm={handleSubmitRegister}
+									isMessage={isMessage}
+								/>
+							}
 						/>
 						<Route
 							path="/edit"
-							element={<Edit handleSubmitForm={handleSubmitEdit} isMessage={isMessage} />}
+							element={
+								<ProtectedRoute
+									loggedIn={loggedIn}
+									element={Edit}
+									handleSubmitForm={handleSubmitEdit}
+									isMessage={isMessage}
+								/>
+							}
 						/>
 						<Route path="*" element={<PageNotFound />} />
 					</Routes>

@@ -1,4 +1,5 @@
 export const BASE_URL = 'https://api.portfolio-diploma.nomoredomains.rocks';
+// export const BASE_URL = 'http://localhost:3000';
 
 const getResponse = (res) => {
 	if (!res.ok) {
