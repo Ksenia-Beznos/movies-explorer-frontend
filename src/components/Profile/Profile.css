@@ -28,7 +28,7 @@
 	justify-content: space-between;
 	max-width: 410px;
 	gap: 147px;
-	padding: 17px 0 220px;
+	padding: 17px 0 180px;
 }
 
 .profile-page__placeholder {
@@ -71,9 +71,12 @@
 
 .profile-page__message {
 	color: #3ddc84;
-	font-size: 18px;
+	font-size: 13px;
 	font-weight: 500;
-	margin: 0 auto;
+	display: block;
+	text-align: center;
+	min-height: 13px;
+	padding-bottom: 40px;
 }
 
 .profile-page__links {
