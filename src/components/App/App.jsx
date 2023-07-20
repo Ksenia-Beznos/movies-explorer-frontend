@@ -51,7 +51,7 @@ function App() {
 		} else {
 			setTimeout(() => {
 				setIsSuccessMessage('');
-			}, 4000);
+			}, 10000);
 		}
 	}, [navigate]);
 
