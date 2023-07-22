@@ -135,6 +135,7 @@ function App() {
 			.then((res) => {
 				if (res) {
 					setLoggedIn(true);
+					setCurrentUser(res);
 					navigate('/movies', { replace: true });
 				}
 			})
