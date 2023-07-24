@@ -1,0 +1,190 @@
+.project {
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+.project__header {
+	margin: 0 auto;
+	padding: 112px 0 23px 0;
+	width: 1140px;
+	border-bottom: 1px #dadada solid;
+	font-size: 22px;
+	font-weight: 400;
+	line-height: 1.21;
+	letter-spacing: -0.9px;
+}
+
+.project__chart {
+	margin: 70px 70px 110px;
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 40px;
+	justify-content: space-between;
+}
+
+.project__description {
+	margin: 0;
+	width: 550px;
+	font-weight: 400;
+}
+
+.project__title {
+	font-size: 20px;
+	margin-bottom: 26px;
+	letter-spacing: -0.9px;
+}
+
+.project__subtitle {
+	font-size: 14px;
+	line-height: 1.4;
+}
+
+.timing {
+	margin: 0 auto 110px 70px;
+	display: grid;
+	row-gap: 14px;
+	grid-template-columns: 228px 912px;
+	text-align: center;
+}
+
+.timing__week {
+	display: grid;
+	align-items: center;
+	margin: 0;
+	min-height: 36px;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.timing__week-color-green {
+	background-color: #3ddc84;
+	color: #000;
+}
+
+.timing__week-color-grey {
+	background-color: #303030;
+}
+
+.timing__task {
+	display: grid;
+	align-items: center;
+	margin: 0;
+	min-height: 17px;
+	font-size: 14px;
+	font-weight: 500;
+	color: #8b8b8b;
+}
+
+@media screen and (max-width: 1279px) {
+	.project {
+		max-width: 768px;
+	}
+
+	.project__header {
+		padding: 90px 0 23px 0;
+		width: 668px;
+	}
+
+	.project__chart {
+		margin: 70px 50px 94px;
+		column-gap: 30px;
+	}
+
+	.project__description {
+		width: 319px;
+	}
+
+	.project__title {
+		margin-bottom: 23px;
+		letter-spacing: -0.8px;
+	}
+
+	.project__subtitle {
+		font-size: 12px;
+		line-height: 1.5;
+	}
+
+	.timing {
+		margin: 0 50px 90px;
+		grid-template-columns: 140px 528px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.project {
+		max-width: 460px;
+	}
+
+	.project__header {
+		width: 460px;
+	}
+
+	.project__chart {
+		margin: 60px auto;
+	}
+
+	.project__description {
+		width: 460px;
+	}
+
+	.project__subtitle {
+		font-size: 14px;
+		margin-bottom: 30px;
+	}
+
+	.timing {
+		margin: 0 0 70px;
+		row-gap: 8px;
+		grid-template-columns: 150px 310px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.project {
+		max-width: 320px;
+	}
+
+	.project__header {
+		padding: 71px 0 28px 0;
+		width: 284px;
+		font-size: 18px;
+	}
+
+	.project__chart {
+		margin: 60px 18px 29px;
+	}
+
+	.project__stages {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 28px;
+	}
+
+	.project__title {
+		font-size: 18px;
+		margin-bottom: 16px;
+		letter-spacing: -0.7px;
+	}
+
+	.project__description {
+		width: 284px;
+	}
+
+	.project__subtitle {
+		font-size: 11px;
+	}
+
+	.timing {
+		margin: 0 18px 70px;
+		row-gap: 8px;
+		grid-template-columns: 100px 184px;
+	}
+
+	.timing__week {
+		font-size: 11px;
+	}
+
+	.timing__task {
+		font-size: 11px;
+	}
+}

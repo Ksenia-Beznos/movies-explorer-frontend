@@ -1,0 +1,149 @@
+.profile-page {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 73px 0 70px;
+}
+
+.profile-page__title {
+	margin: 0 auto 123px;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 1.21;
+	text-align: center;
+}
+
+.profile-page__name {
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	max-width: 410px;
+	gap: 147px;
+	padding-bottom: 16px;
+	border-bottom: 1px solid #424242;
+}
+
+.profile-page__email {
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	max-width: 410px;
+	gap: 147px;
+	padding: 17px 0 180px;
+}
+
+.profile-page__placeholder {
+	margin: 0;
+}
+
+.profile-page__text {
+	margin: 0;
+}
+
+.profile-page__placeholder-font {
+	font-size: 11px;
+	font-weight: 500;
+	line-height: 1.21;
+}
+
+.profile-page__text-font {
+	font-size: 11px;
+	font-weight: 400;
+	line-height: 1.21;
+}
+
+.profile-page__edit {
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 1.21;
+	color: white;
+}
+
+.profile-page__exit {
+	font-size: 13px;
+	font-weight: 500;
+	color: #ee3465;
+	line-height: 1.21;
+	outline: none;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.profile-page__message {
+	color: #3ddc84;
+	font-size: 13px;
+	font-weight: 500;
+	display: block;
+	text-align: center;
+	min-height: 13px;
+	padding-bottom: 40px;
+}
+
+.profile-page__links {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 auto;
+	gap: 16px;
+}
+
+.profile-page__link {
+	text-decoration: none;
+}
+
+.profile-page__link:hover {
+	opacity: 0.7;
+}
+
+@media screen and (max-width: 768px) {
+	.profile-page {
+		max-width: 768px;
+		padding: 232px 0 268px;
+	}
+
+	.profile-page__title {
+		margin: 0 auto 96px;
+	}
+
+	.profile-page__email {
+		padding: 17px 0 212px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.profile-page {
+		max-width: 280px;
+		padding: 66px 0 40px;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.profile-page {
+		max-width: 320px;
+	}
+
+	.profile-page__title {
+		margin: 0 auto 81px;
+	}
+
+	.profile-page__name {
+		max-width: 260px;
+		gap: 10px;
+		padding-bottom: 16px;
+	}
+
+	.profile-page__email {
+		max-width: 260px;
+		gap: 10px;
+		padding: 17px 0 380px;
+	}
+
+	.profile-page__edit {
+		font-size: 12px;
+		font-weight: 400;
+	}
+
+	.profile-page__exit {
+		font-size: 12px;
+	}
+}

@@ -1,0 +1,68 @@
+.navigation {
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+
+.navigation__link-active {
+	text-decoration: none;
+	color: #fff;
+	font-size: 13px;
+	line-height: 1.4;
+	font-weight: 500;
+}
+
+.navigation__movies {
+	display: flex;
+	gap: 16px;
+	margin: 0 auto;
+}
+
+.navigation__movies-link {
+	text-decoration: none;
+	color: #fff;
+	font-size: 13px;
+	line-height: 1.4;
+	font-weight: 400;
+}
+
+.navigation__movies-link:hover {
+	opacity: 0.7;
+}
+
+.navigation__profile {
+	display: flex;
+	gap: 17px;
+	align-items: center;
+}
+
+.navigation__profile-link {
+	text-decoration: none;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.navigation__profile-link:hover {
+	opacity: 0.7;
+}
+
+.navigation__profile-icon {
+	width: 26px;
+	height: 30px;
+	background: center url(../../images/icon-account.svg) no-repeat #313131;
+	border-radius: 4px;
+}
+
+@media screen and (max-width: 1279px) {
+	.navigation {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.navigation {
+		display: none;
+	}
+}

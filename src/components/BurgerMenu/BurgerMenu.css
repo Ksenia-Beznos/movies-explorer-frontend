@@ -1,0 +1,191 @@
+.menu__btn-burger {
+	display: none;
+}
+
+.menu {
+	display: none;
+}
+
+@media screen and (max-width: 768px) {
+	.menu {
+		display: flex;
+		flex-direction: column;
+		position: fixed;
+		top: 0;
+		background-color: #202020;
+		z-index: 100;
+		width: 100vw;
+		max-width: 520px;
+		height: 100vh;
+		right: -100vw;
+		transition: visibility 1s, right 1s ease;
+	}
+
+	.menu-active {
+		right: 0;
+		visibility: visible;
+	}
+
+	.menu__links {
+		width: 100vw;
+		max-width: 520px;
+		text-align: center;
+		margin-top: 159px;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		gap: 30px;
+	}
+
+	.menu__link {
+		text-decoration: none;
+		color: #fff;
+		font-size: 18px;
+		font-weight: 500;
+	}
+
+	.menu__link-active {
+		margin: 0 auto;
+		text-decoration: none;
+		color: #fff;
+		font-size: 18px;
+		font-weight: 500;
+		border-bottom: 2px solid #fff;
+		min-width: 72px;
+	}
+
+	.menu__link:hover,
+	.menu__link-active:hover {
+		opacity: 0.7;
+	}
+
+	.menu__profile {
+		margin-top: 619px;
+		display: flex;
+		flex-direction: row;
+		gap: 17px;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.menu__link-profile {
+		font-size: 14px;
+	}
+
+	.menu__link-profile-icon {
+		width: 26px;
+		height: 30px;
+		background: center url(../../images/icon-account.svg) no-repeat #313131;
+		border-radius: 4px;
+	}
+
+	.overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		width: 100vw;
+		height: 100vh;
+		background: rgba(0, 0, 0, 0.3);
+		opacity: 1;
+		transition: opacity 0.3s ease 0s;
+		display: none;
+	}
+
+	.overlay-open {
+		display: flex;
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.menu__btn,
+	.menu__btn-open {
+		position: absolute;
+		top: 23px;
+		right: 38px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 28px;
+		height: 28px;
+		transition: all 0.4s ease-in-out;
+		cursor: pointer;
+	}
+
+	.menu__btn-burger {
+		display: flex;
+		width: 28px;
+		height: 3px;
+		background-color: #fff;
+		transition: all 0.4s ease-in-out;
+		position: absolute;
+		z-index: 1000;
+		cursor: pointer;
+	}
+
+	.menu__btn-burger::before,
+	.menu__btn-burger::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		width: 28px;
+		height: 3px;
+		background-color: #fff;
+		transition: all 0.4s ease-in-out;
+	}
+
+	.menu__btn-burger::before {
+		transform: translateY(-10px);
+	}
+
+	.menu__btn-burger::after {
+		transform: translateY(10px);
+	}
+
+	.menu__btn-open .menu__btn-burger {
+		transform: translateX(-50px);
+		background: transparent;
+	}
+
+	.menu__btn-open .menu__btn-burger::before {
+		transform: rotate(45deg) translate(35px, -35px);
+	}
+
+	.menu__btn-open .menu__btn-burger::after {
+		transform: rotate(-45deg) translate(35px, 35px);
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.menu__btn,
+	.menu__btn-open {
+		top: 30px;
+		right: 23px;
+		width: 23px;
+		height: 15px;
+	}
+
+	.menu__btn-burger {
+		width: 23px;
+	}
+
+	.menu__btn-burger::before,
+	.menu__btn-burger::after {
+		width: 23px;
+	}
+
+	.menu {
+		max-width: 320px;
+	}
+
+	.menu__links {
+		max-width: 320px;
+		margin-top: 144px;
+		gap: 24px;
+	}
+	.menu__profile {
+		margin-top: 444px;
+	}
+}
